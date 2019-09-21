@@ -1,0 +1,27 @@
+﻿body,div,ul,li,font,span,img{margin:0px;padding:0px;}
+body{background:none}
+.renthelp{width:100%;height:100%;min-width:1100px;background:url(../images/renthelpbg.png) repeat;position:fixed;z-index:1000;display:none;}
+.renthelpmain{width:1100px;margin:0px auto;position:relative;}
+.renthelp_strat{width:118px;height:92px;position:absolute;top:-20px;right:25px; background:url(../images/renthelp.png) no-repeat;padding-left:58px;cursor:pointer;}
+.helprentnext{width:87px;height:48px;position:absolute; background: url(../images/helprentnext.png) no-repeat;cursor:pointer;}
+.renthelp1{width:234px;height:121px;position:absolute;top:20px;left:380px; background:url(../images/renthelp1.png) no-repeat;display:none;cursor:pointer;}
+.next1{top:100px;left:550px;display:none;}
+
+.renthelp1_1{width:316px;height:121px;position:absolute;top:20px;left:490px; background:url(../images/renthelpye.png) no-repeat;display:none;cursor:pointer;}
+.next1_1{top:110px;left:450px;display:none;}
+.renthelp2{width:260px;height:121px;position:absolute;top:340px;left:120px; background:url(../images/renthelp2.png) no-repeat;display:none;cursor:pointer;}
+.next2{top:470px;left:380px;display:none;}
+.renthelp2_2{width:267px;height:121px;position:absolute;top:330px;left:450px; background:url(../images/renthelp2_2.png) no-repeat;display:none;cursor:pointer;}
+.next2_2{top:450px;left:480px;display:none;}
+.renthelp3{width:357px;height:121px;position:absolute;top:460px;left:0px; background:url(../images/renthelp3.png) no-repeat;display:none;cursor:pointer;}
+.next3{top:570px;left:250px;display:none;}
+.renthelp4{width:523px;height:121px;position:absolute;top:655px;left:350px; background:url(../images/renthelp4.png) no-repeat;display:none;cursor:pointer;}
+.next4{top:790px;left:680px;display:none;}
+.renthelp5{width:383px;height:121px;position:absolute;top:70px;left:790px; background:url(../images/renthelp5.png) no-repeat;display:none;cursor:pointer;}
+.next5{top:190px;right:0px;width:87px;height:48px;position:absolute; background: url(../images/helprentfinish.png) no-repeat;display:none;cursor:pointer;}
+.rclose{font-size:60px;color:#fff;position:absolute;top:35px;right:-125px;cursor:pointer;cursor:pointer;}
+
+  .Androidios{position:fixed;height:100%;width:100%;top:0px;left:0px;background:url(../images/renthelpbg.png) repeat;z-index:20;}
+.Androidios .gameselect{width:796px;height:142px;position:absolute;left:50%;top:50%;margin-left:-392px;margin-top:-90px;}
+  .Androidios .gameselect a{display:block;width:387px;height:142px;margin-right:11px;float:left;background:#444;border-radius:15px;}
+  .Androidios .gameselect a:hover{background:#333;}

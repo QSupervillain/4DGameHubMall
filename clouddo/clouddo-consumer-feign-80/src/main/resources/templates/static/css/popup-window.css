@@ -1,0 +1,56 @@
+﻿*{
+    padding: 0;
+    margin: 0;
+}
+.popup-window{
+    /*display: none;*/
+    position: fixed;/*整个页面，固定定位 */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(64,64,64,0.4);
+}
+.popup-window-page{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.popup-window-content{
+    width: 580px;
+    height: 515px;
+    position: absolute;
+    top: 50%;
+    margin-top: -257px;
+    left: 50%;
+    margin-left: -290px;
+    z-index: 9999;
+}
+.popup-window-close{
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    top: 0;
+    left: 522px;
+    cursor: pointer;
+    z-index: 10000;
+}
+.popup-window-image{
+    width: 580px;
+    height: 507px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.popup-window-button{
+    position: absolute;
+    width: 199px;
+    height: 44px;
+    left: 193px;
+    top: 431px;
+}
+.popup-window-button a{
+    display: block;
+}

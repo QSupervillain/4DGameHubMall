@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="clouddo-comm" />
+        <module name="clouddo-consumer-dashboard-6001" />
+        <module name="clouddo-consumer-feign-80" />
+        <module name="clouddo-eureka-4001" />
+        <module name="clouddo-provider-hystrix-5001" />
+        <module name="clouddo-zuul-6002" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="clouddo" target="1.8" />
+      <module name="clouddo-comm" target="1.8" />
+      <module name="clouddo-consumer-dashboard-6001" target="1.8" />
+      <module name="clouddo-consumer-feign-80" target="1.8" />
+      <module name="clouddo-eureka-4001" target="1.8" />
+      <module name="clouddo-provider-hystrix-5001" target="1.8" />
+      <module name="clouddo-zuul-6002" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="clouddo" options="" />
+      <module name="clouddo-comm" options="-parameters" />
+      <module name="clouddo-consumer-dashboard-6001" options="-parameters" />
+      <module name="clouddo-consumer-feign-80" options="-parameters" />
+      <module name="clouddo-eureka-4001" options="-parameters" />
+      <module name="clouddo-provider-hystrix-5001" options="-parameters" />
+      <module name="clouddo-zuul-6002" options="-parameters" />
+    </option>
+  </component>
+</project>

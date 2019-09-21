@@ -1,0 +1,166 @@
+﻿i,em {
+	font-style: normal;
+}
+
+.icon, 
+.free-play-list .slick-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../images/index-sprite.png) -41px -53px no-repeat;
+}
+
+
+.icon-arrow {
+    width: 6px;
+    height: 10px;
+    background-position: -41px -53px;
+    margin: 0 10px;
+}
+
+.zhw-view-move a.sprite-ico i {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-position: -246px -4px;
+    width: 6px;
+    height: 11px;
+}
+
+/*2019-01-16*/
+.se-triangle,
+.se-triangle-on{
+    width: 6px;
+    height: 5px;
+    display: inline-block;
+    background-position: -31px -53px;
+    margin-left: 10px;
+    position: relative;
+    top: -2px;
+}
+.se-triangle{
+    background-position: -21px -53px;
+}
+.fr.act_color .se-triangle{
+    background-position: -31px -53px;
+}
+.hot-item .hot-icon{
+    width: 9px;
+    height: 11px;
+    background-position: -64px -52px;
+    display: inline-block;
+    margin-left: 4px;
+}
+.hot-item-on .hot-icon{
+    background-position: -51px -52px;
+}
+.history-del-icon{
+    width: 12px;
+    height: 15px;
+    display: inline-block;
+    background-position: -77px -49px;
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    cursor: pointer;
+}
+.home-download-icon{
+    width: 11px;
+    height: 12px;
+    background-position: -193px -50px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.side-hot-icon{
+    width: 12px;
+    height: 16px;
+    float: left;
+    background-position: -167px -50px;
+    margin: 12px 8px 12px 19px;
+}
+.side-right-icon{
+    width: 7px;
+    height: 12px;
+    float: right;
+    background-position: -183px -52px;
+    margin: 14px 15px 14px 19px;
+}
+.side-game-icon1{
+    width: 16px;
+    height: 14px;
+    background-position: -201px -28px;
+    float: left;
+    margin: 16px 41px 16px 22px;
+}
+.side-game-icon2{
+    width: 14px;
+    height: 18px;
+    background-position: -122px -28px;
+    float: left;
+    margin: 16px 43px 16px 22px;
+}
+.side-game-icon3{
+    width: 16px;
+    height: 16px;
+    background-position: -181px -28px;
+    float: left;
+    margin: 16px 41px 16px 22px;
+}
+.side-game-icon4{
+    width: 16px;
+    height: 15px;
+    background-position: -140px -28px;
+    float: left;
+    margin: 16px 42px 16px 22px;
+}
+.side-game-icon5{
+    width: 17px;
+    height: 14px;
+    background-position: -160px -28px;
+    float: left;
+    margin: 16px 41px 16px 22px;
+}
+.side-game-icon6{
+    width: 14px;
+    height: 14px;
+    background-position: -104px -28px;
+    float: left;
+    margin: 16px 43px 16px 23px;
+}
+.zhw-swiper-next,
+.zhw-swiper-prev{
+    width: 34px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -30px;
+    background-position: -127px -68px;
+    cursor: pointer;
+}
+.zhw-swiper-next{
+    left: inherit;
+    right: 0;
+    background-position: -203px -69px;
+}
+.shq-down-icon{
+    width: 12px;
+    height: 18px;
+    display: inline-block;
+    background-position: -209px -51px;
+    position: absolute;
+    top: 12px;
+    left: 64px;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.drawer-fire-icon{
+    width: 9px;
+    height: 11px;
+    display: inline-block;
+    background-position: -51px -52px;
+    margin-left: 4px;
+    -webkit-animation: hot-icon 4s infinite alternate;
+    animation: hot-icon 4s infinite alternate;
+}

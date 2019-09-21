@@ -1,0 +1,68 @@
+﻿/* 首页登录成功 */
+.login_neck_wrap{position: relative;}
+.login_neck_wrap i{position: absolute;height: 18px;right:5px;top:8px;cursor: pointer;}
+.login_neck_wrap i img{width:100%;height: 100%;}
+/* 个人中心 */
+.leftImg{position: relative;overflow: initial !important;}
+.leftImg i{position:absolute;bottom: -5px;width: 100px;height: 18px;left: 0;text-align: center;}
+.leftImg i img{height: 100% !important;width: auto !important;}
+/* 账号详情 */
+.shared_hour_price{line-height: 30px;}
+.shared_hour_price img{vertical-align: middle;margin-top: -2px;}
+.shared_hour_price span{color: #fb8946;font-size:18px;font-weight: 900;margin-left:12px;vertical-align: bottom;}
+.shared_hour_price em{color: #fb8946;font-size:12px;font-weight: 900;margin-right:12px}
+.shared_hour_price a{color: #888888;font-size:12px;}
+.shared_hour_price a:hover{color: #fb8946;}
+/* 评价 */
+.evaluate_list .name img{
+	width: 16px;
+	height:18px;
+	position: relative;
+	vertical-align: middle;
+	margin-top: -2px;
+	margin-right: 5px;
+	top: 0;
+	left: 0;
+	border: none;
+}
+/*search*/
+.zuspan, .zuspan.zuSan{
+	line-height: 1.4 !important;
+}
+.zuspan, .zuspan.zuSan img{
+	vertical-align: middle;
+	margin-top: -2px;
+	margin-right: 5px;
+}
+.shared_delete{
+	text-decoration: line-through;
+	color: #868686 !important;
+}
+.shared_honorable_price{
+	text-align: center;
+	line-height: 35px;
+	color:#ff9f58;
+	font-size: 14px;
+	font-weight: bold;
+}
+.shared_honorable_price img{
+	vertical-align: middle;
+	margin-top: -2px;
+	margin-right: 5px;
+}
+/*登录效果*/
+.shared_animate{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 1000;
+}
+.shared_animate iframe{
+	margin-top: 50px;
+	left: 50%;
+    position: absolute;
+    margin-left: -325px;
+}

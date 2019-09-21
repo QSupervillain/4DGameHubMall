@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/clouddo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clouddo/clouddo-comm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clouddo/clouddo-consumer-dashboard-6001" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clouddo/clouddo-consumer-feign-80" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clouddo/clouddo-eureka-4001" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clouddo/clouddo-provider-hystrix-5001" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clouddo/clouddo-zuul-6002" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,109 @@
+﻿/* 喇叭 */
+.zhw-global {
+    position: relative;
+    z-index: 999;
+}
+.zhw-trumpet {
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+    width: 315px;
+    height: auto;
+    z-index: 199;
+}
+
+.zhw-trumpet .trumpet-item {
+    position: relative;
+    width: 263px;
+    height: 37px;
+    padding: 8px 0;
+    padding-left: 12px;
+    padding-right: 20px;
+    margin-left: 8px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(234, 234, 234);
+    border-color: rgba(234, 234, 234, 0.52);
+    border-radius: 2px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all .6s;
+    animation: mlshow 1s ease 1;
+    -webkit-animation: mlshow 1s ease 1;
+}
+
+.zhw-trumpet .ml-hidden {
+    animation: mlhidden 1s ease 1;
+    -webkit-animation: mlhidden 1s ease 1;
+}
+
+.trumpet-close {
+    position: absolute;
+    top: -1px;
+    right: 0;
+}
+
+
+.trumpet-close .trumpet-close-box {
+    display: inline-block;
+    width: 18px;
+    height: 16px;
+    line-height: 16px;
+    background: rgb(245, 245, 245);
+    border-radius: 0px 2px 0px 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: background .6s;
+}
+
+.trumpet-close:hover .trumpet-close-box i {
+    background-position: -39px -121px;
+}
+
+.trumpet-close-box i {
+    width: 8px;
+    height: 10px;
+    background-position: -24px -121px;
+}
+
+.trumpet-item .zhw-user-name {
+    float: left;
+    font-size: 12px;
+}
+
+.zhw-user-name .trumpet-ico {
+    display: inline-block;
+    width: 22px;
+    height: 11px;
+    position: relative;
+}
+
+.zhw-user-name .trumpet-ico i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 11px;
+    background-position: 0 -120px;
+    transition: width .8s;
+    animation: trumpet .8s ease infinite;
+    -webkit-animation: trumpet .8s ease infinite;
+}
+
+.zhw-user-name .trumpet-user-name {
+    font-weight: bold;
+    color: rgb(148, 157, 168);
+    color: rgba(148, 157, 168, 0.52);
+    font-size: 12px;
+}
+
+.zhw-user-name .trumpet-user-name em {
+    color: rgb(254, 66, 66);
+}
+
+.trumpet-item a {
+	color: #666;
+	transition: all .6s;
+}
+.trumpet-item a:hover{
+	color: rgba(102, 102, 102, 0.85);
+}

@@ -1,0 +1,94 @@
+﻿ol{
+	list-style: none;
+}
+.large,.on{
+	position:relative;
+}
+.carousel{
+	width: 648px;
+	height: 438px;
+	border: 1px solid #12263f;
+	position:absolute;
+	left:130px;
+	top:15px;
+	background:url(../images/searchtkuangbg.jpg) no-repeat;;
+	border-radius:1%;
+	z-index:2;
+}
+.carousel .slideshow{
+	width: 620px;
+	height: 410px;
+	position:relative;
+	overflow: hidden;
+	margin: 14px;
+}
+.carousel .slideshow ul{
+	width:1000%;
+	height: 100%;
+	position: absolute;
+	top:0%;
+	left:0%;
+}
+.carousel .slideshow li{
+	float: left;
+	width:10%;
+	height:100%;
+}
+.carousel .slideshow li img{
+	border-radius:1%;
+	height: 100%;
+}
+.carousel span{
+	display: inline-block;
+	width:50px;
+	height: 60px;
+	position:absolute;
+	top:50%;
+	left:338px;
+	margin-top: -30px;
+	cursor:pointer;
+	display: none;
+	
+}
+.carousel .left_B{
+	background:url(../images/l.png);
+}
+.carousel .right_B{
+	background:url(../images/r.png);
+	right:15px;
+	left:280px;
+}
+.carousel ol{
+	padding:0px;
+	position:absolute;
+	bottom:20px;
+	left:50%;
+	margin-left: -50px;
+	width: 120px;
+	height: 14px;
+	background:rgba(255,255,255,0.5);
+	border-radius:6px;
+}
+.carousel ol li{
+	float: left;
+	border-radius:100%;
+	width:10px;
+	height:10px;
+	margin-top: 2px;
+	margin-left: 8px;
+	background: #ccc;
+	cursor:pointer;
+}
+.carousel li.cur{
+	background:#17ff00;
+}
+
+
+.searchtop .title{height:30px;border-bottom:1px solid #e8e8e8;}
+.searchtop ul{padding:0 10px;}
+.searchtop ul li{width:1185px;padding:0 15px;font-size:14px;height:45px;line-height:45px;border-bottom:1px solid #f1f1f1}
+.searchtop ul li a{display:inline-block;min-width:60px;padding:5px;text-align:center;}
+.searchtop ul li span{display:inline-block;width:100px;border-right:1px solid #f1f1f1;text-align:right;padding-right:10px;margin-right:10px;}
+.searchtop ul li input[type=text]{width:200px;height:22px;line-height:22px;padding:0 10px;}
+.searchtop ul li input.inputstyle1{width:150px;height:22px;line-height:22px;padding:0 10px;}
+.searchtop ul li input[type=button]{width:100px;height:27px;line-height:25px;background:#f00;color:#fff;border:none;}

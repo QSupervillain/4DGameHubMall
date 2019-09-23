@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/clouddo.iml" filepath="$PROJECT_DIR$/clouddo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clouddo-comm/clouddo-comm.iml" filepath="$PROJECT_DIR$/clouddo-comm/clouddo-comm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clouddo-consumer-dashboard-6001/clouddo-consumer-dashboard-6001.iml" filepath="$PROJECT_DIR$/clouddo-consumer-dashboard-6001/clouddo-consumer-dashboard-6001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clouddo-consumer-feign-80/clouddo-consumer-feign-80.iml" filepath="$PROJECT_DIR$/clouddo-consumer-feign-80/clouddo-consumer-feign-80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clouddo-eureka-4001/clouddo-eureka-4001.iml" filepath="$PROJECT_DIR$/clouddo-eureka-4001/clouddo-eureka-4001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clouddo-provider-hystrix-5001/clouddo-provider-hystrix-5001.iml" filepath="$PROJECT_DIR$/clouddo-provider-hystrix-5001/clouddo-provider-hystrix-5001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clouddo-zuul-6002/clouddo-zuul-6002.iml" filepath="$PROJECT_DIR$/clouddo-zuul-6002/clouddo-zuul-6002.iml" />
+    </modules>
+  </component>
+</project>

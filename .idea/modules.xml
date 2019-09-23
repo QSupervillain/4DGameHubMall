@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/4DGameHubMall.iml" filepath="$PROJECT_DIR$/.idea/4DGameHubMall.iml" />
       <module fileurl="file://$PROJECT_DIR$/clouddo/clouddo.iml" filepath="$PROJECT_DIR$/clouddo/clouddo.iml" />
       <module fileurl="file://$PROJECT_DIR$/clouddo/clouddo-comm/clouddo-comm.iml" filepath="$PROJECT_DIR$/clouddo/clouddo-comm/clouddo-comm.iml" />
       <module fileurl="file://$PROJECT_DIR$/clouddo/clouddo-consumer-dashboard-6001/clouddo-consumer-dashboard-6001.iml" filepath="$PROJECT_DIR$/clouddo/clouddo-consumer-dashboard-6001/clouddo-consumer-dashboard-6001.iml" />

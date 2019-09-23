@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>404</title>
+    <link rel="stylesheet" type="text/css" href="/page/css/base.css?v=<?=date('ymd').rand(1,10)?>"/>
+    <link rel="stylesheet" type="text/css" href="/page/css/data_none.css"/>
+    <script type="text/javascript" src="/page/js/jq1.9.js"></script>
+	<script src="https://dup.baidustatic.com/js/ds.js"></script></head>
+</head>
+<body>
+<div class="header_wrap">
+    <div class="header_top">
+        <div class="center">
+            <div class="ul_link">
+                <a href="https://www.3dmgame.com" target="_blank"><i class="ico1"></i>主站</a>
+                <a href="https://shop.3dmgame.com" target="_blank"><i class="ico2"></i>商城</a>
+                <a href="https://bbs.3dmgame.com" target="_blank"><i class="ico3"></i>论坛</a>
+                <a href="https://www.3dmgame.com/app.html" target="_blank"><i class="ico4"></i>手机APP</a>
+            </div>
+            <div class="head_top_rt" id="my_user_top">
+                <img src="https://ol.3dmgame.com/page/images/ioc-ren.png">
+                <a href="javascript:void(0);" class="login" onclick="openlogin()">登录</a>
+                <a href="javascript:void(0);" class="enroll" onclick="openregister()">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="center">
+            <a href="https://www.3dmgame.com"><img src="https://ol.3dmgame.com/page/images/logo.png" class="login"></a>
+            <div class="search">
+                <form action="https://so.3dmgame.com/" method="get" target="_blank" autocomplete="off" id="bdcs">
+                    <input type="text" onblur="if (this.value=='') this.value='我的世界'" value="我的世界" this.style.color="#000000" onfocus="if (this.value!='') this.value=''" name="keyword" />
+                    <input type="hidden" name="subsearch" value="1" />
+                    <input type="hidden" name="type" value="3" />
+                    <button><i id="sub_btn"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="center">
+            <ul>
+                <li class="{onnews}"><a href="https://ol.3dmgame.com/news/">新闻<span class="hide" ></span></a></li>
+                <li class="{ongamenews}"><a href="https://ol.3dmgame.com/esports/">电竞<span class="hide" ></span></a></li>
+                <li class="{onreview}"><a href="https://ol.3dmgame.com/review/">评测<span class="hide" ></span></a></li>
+                <li class="{onvideo}"><a href="https://ol.3dmgame.com/v_all_1/">视频<span class="hide" ></span></a></li>
+                <li class="{onraiders}"><a href="https://ol.3dmgame.com/gl/">攻略<span class="hide" ></span></a></li>
+                <li class="{onhao}"><a href="https://ol.3dmgame.com/hao/">发号<span class="hide" ></span></a></li>
+                <li class="{onku}"><a href="https://ol.3dmgame.com/ku/">专区<span class="hide" ></span></a></li>
+                <li class="{ontag}"><a href="https://ol.3dmgame.com/tag/">标签<span class="hide" ></span></a></li>
+                <li class="{ontest}"><a href="https://ol.3dmgame.com/test/">开测表<span class="hide" ></span></a></li>
+                <li><a href="https://ol.3dmgame.com/pic_all_1/">图集<span class="hide" ></span></a></li>
+            </ul>
+            <ol>
+                <li><a href="https://www.3dmgame.com">首页</a></li>
+                <li><a href="https://www.3dmgame.com/games/">单机</a></li>
+                <li><a href="https://shouyou.3dmgame.com">手游</a></li>
+                <li><a href="https://ol.3dmgame.com" class="as">网游</a></li>
+                <li><a href="https://yeyou.3dmgame.com">页游</a></li>
+                <li><a href="https://yeyou.3dmgame.com/h5/">H5</a></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="content">  
+   <div class="data_none">
+	   <div class="img_bj"><a href="javascript:void(0);" class="img"><img src="/page/images/logo_img.png"></a></div>
+	   <div class="data_tex">
+		<p>很抱歉，您访问的页面不在地球上...</p>
+		<div class="tex_a"><img src="/page/images/jiazai.gif">等待中，可以选择点击<a href="https://ol.3dmgame.com/">3DM网游</a>，跳转到3DM网游首页！</div>
+	    <div class="form">
+	    <form name="f" action="http://so.3dmgame.com/" method="get">
+		   <div class="search_panel">
+			   <input type="hidden" value="0" name="auth" id="auth">
+			   <input type="text" id="kw" maxlength="100" size="40" name="keyword" onfocus="if (this.value!='')  this.value=''" this.style.color="#000000" value="请输入关键字" onblur="if (this.value=='')  this.value='请输入关键字'">
+			   <button type="submit" class="btn"><i></i></button>
+		   </div>
+	    </form>
+	    </div>
+	   </div>
+	   <!-- 广告位：404页面广告 -->
+<script>
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div id="' + s + '"></div>');
+        (window.slotbydup=window.slotbydup || []).push({
+            id: '6410875',
+            container: s,
+            size: '220,440',
+            display: 'inlay-fix'
+        });
+    })();
+</script>
+   </div>
+</div>
+<div class="fotter">
+	<div class="fotter-top">
+		<div class="center">
+            <div class="wrap">
+                <p>综合内容</p>
+                <ul>
+                    <li><a href="http://3c.3dmgame.com/" target="_blank">硬件设备</a></li>
+                    <li><a href="https://bbs.3dmgame.com/" target="_blank">游戏论坛</a></li>
+                    <li><a href="https://www.3dmgame.com/bagua/" target="_blank">娱乐频道</a></li>
+                    <li><a href="https://www.3dmgame.com/original.html" target="_blank">原创专栏</a></li>
+                    <li><a href="https://shop.3dmgame.com" target="_blank">游戏商城</a></li>
+                    <li><a href="https://www.3dmgame.com/hanhua/" target="_blank">游戏汉化</a></li>
+                </ul>
+            </div>
+            <div class="wrap">
+                <p>单机游戏</p>
+                <ul>
+                    <li><a href="https://dl.3dmgame.com/" target="_blank">游戏下载</a></li>
+                    <li><a href="https://dl.3dmgame.com/patch/" target="_blank">补丁MOD</a></li>
+                    <li><a href="https://www.3dmgame.com/gl/" target="_blank">原创攻略</a></li>
+                    <li><a href="https://www.3dmgame.com/games/ns_all_1/" target="_blank">Switch</a></li>
+                    <li><a href="https://www.3dmgame.com/games/ps4_all_1/" target="_blank">PS4</a></li>
+                    <li><a href="https://www.3dmgame.com/release/" target="_blank">发售表</a></li>
+                </ul>
+            </div>
+            <div class="wrap">
+                <p>手机游戏</p>
+                <ul>
+                    <li><a href="https://shouyou.3dmgame.com/android/" target="_blank">安卓游戏</a></li>
+                    <li><a href="https://shouyou.3dmgame.com/ios/" target="_blank">苹果游戏</a></li>
+                    <li><a href="https://shouyou.3dmgame.com/gl/" target="_blank">手游攻略</a></li>
+                    <li><a href="https://shouyou.3dmgame.com/ka/" target="_blank">手游礼包</a></li>
+                    <li><a href="https://shouyou.3dmgame.com/zt/" target="_blank">专题合集</a></li>
+                    <li><a href="https://shouyou.3dmgame.com/phb/" target="_blank">手游排行</a></li>
+                </ul>
+            </div>
+            <div class="wrap">
+                <p>网络游戏</p>
+                <ul>
+                    <li><a href="https://ol.3dmgame.com/news/" target="_blank">网游资讯</a></li>
+                    <li><a href="https://ol.3dmgame.com/esports/" target="_blank">竞技赛事</a></li>
+                    <li><a href="https://ol.3dmgame.com/news_5_1/" target="_blank">网游活动</a></li>
+                    <li><a href="https://ol.3dmgame.com/ku/" target="_blank">网游大全</a></li>
+                    <li><a href="https://ol.3dmgame.com/test/" target="_blank">新游试玩</a></li>
+                    <li><a href="https://ol.3dmgame.com/hao/" target="_blank">激活码</a></li>
+                </ul>
+            </div>
+        </div>
+	</div>
+	<div class="fotter-bottom">
+		<div class="fotter-link">
+			<a href="https://www.3dmgame.com/s/about.html" target="_blank">关于3DMGAME</a>|<a href="https://www.3dmgame.com/s/joinus.html" target="_blank">招聘信息</a>|<a href="https://www.3dmgame.com/s/sitemap.html" target="_blank">网站地图</a>|<a href="https://www.3dmgame.com/s/contact.html" target="_blank">联系我们</a>
+			<p>CopyRight©2003-2018 <a href="https://www.3dmgame.com">WWW.3DMGAME.COM</a> All Right Reserved 京ICP备14006952号-1 京网文（2016）1650-207号</p>
+		</div>
+	</div>
+</div>
+<div style="display: none;">
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?41e10dae8e5d7e8cc907484abce82fb9";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</div>
+<script src="https://my.3dmgame.com/user/js/user.js?v=08294"></script>
+        <div id="my_login_form" class="login_wrap"  style="display: none;">
+            <div class="form_login">
+                <div class="title">会员登录</div>
+                <div class="input_wrap login_username">
+                    <div class="name_ico">
+                        <i></i>
+                    </div>
+                    <input type="text" title="用户名" name="username" id="loginname" value="" maxlength="" placeholder="请输入手机号 / 论坛账号 " />
+                    <p class="Tipsbox_yes Tips_name"></p>
+                </div>
+                <div class="input_wrap login_password">
+                    <div class="password_ico">
+                        <i></i>
+                    </div>
+                    <input type="password" title="密码" name="passwd" id="loginpassword" value="" required="required" placeholder="请输入密码">
+                    <p class="Tipsbox_yes Tips_pswd"></p>
+                </div>
+                <div class="Tipsbox Tips-name">
+                    <i></i>
+                    <p>请输入手机号或论坛账号</p>
+                </div>
+                <div class="Tipsbox Tips-pswd">
+                    <i></i>
+                    <p>请输入密码</p>
+                </div>
+                <div class="auto_login">
+                    <div class="radiobtn">
+                        <input type="checkbox" id="atloginck" value="1" checked="checked" onchange="setautologin(this)" />
+                        <input type="hidden" name="autologin" id="myautologin" value="1" />
+                        <span class="inpbg"></span>
+                    </div>
+                    <label for="atloginck">自动登录</label>
+                    <a href="https://my.3dmgame.com/findpasswd" class="forget_link" target="_blank">忘记密码</a>
+                    <a href="javascript:void(0);" class="registered_link" onclick="openregister()">新会员注册</a>
+                </div>
+                <a href="javascript:void(0);" class="submit" onclick="login_submit()">登 录</a>
+                <div class="other_login">
+                    <p>社交账号登录</p>
+                </div>
+                <div class="other_login_list">
+                    <div class="weibo">
+                        <i onclick="sina_login()"></i>
+                    </div>
+                    <div class="weixin">
+                        <i onclick="wechat_login()"></i>
+                    </div>
+                    <div class="QQ">
+                        <i onclick="qq_login()"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="form_register">
+                <div class="title">3DM  欢迎新人加入</div>
+                <div class="infowrap">
+                    <div class="input_lis">
+                        <span>区号:</span>
+                        <select id="areacode" name="areacode"></select>
+                    </div>
+                    <div class="input_lis">
+                        <span>账号:</span>
+                        <input value="" required="required" autocomplete="off" requiredtitle="请输入手机号" patterntitle="国内手机号为11个数字国外手机为区号-手机号!" class="mobile" type="text" name="mobile" id="mobile" placeholder="请输入手机号">
+                    </div>
+                    <div class="input_lis">
+                        <span>密码:</span>
+                        <input id="regpasswd" name="regpasswd" value="" required="required" autocomplete="off" title="别忘了密码" class="passwd" type="password" placeholder="请输入密码（6-18位字母、数字、符号）">
+                    </div>
+                    <div class="input_lis">
+                        <span>确认密码:</span>
+                        <input id="checkpasswd" name="checkpasswd" value="" required="required" autocomplete="off" title="别忘了密码" class="checkpasswd" type="password" placeholder="再次输入密码">
+                    </div>
+                    <div class="input_lis yzm_inp">
+                        <span>验证码:</span>
+                        <input id="validate" name="validate" value="" required="required" requiredtitle="输入验证码" type="text" class="yzm-c" maxlength="16" placeholder="输入验证码">
+                            <div class="time " id="validate_btn" onclick="get_regsms()">获取验证码</div>
+                    </div>
+                    <div class="tips">
+                        收不到验证码？<span class="feedback" onclick="show_feedback()">去反馈</span>
+                    </div>
+                    <div class="submit_wrap">
+                        <span class="submit" onclick="reg_submit()">注 册</span>
+                    </div>
+                    <div class="rule_wrap">
+                        <input id="rule" name="rule" type="checkbox" checked="checked" value="">
+                        <div class="btn_ico2"></div>
+                        <label for="rule">我已同意</label><a href="https://my.3dmgame.com/agreement" target="_blank">《3DM账号协议》</a>
+                        <div class="tips_login">已有账号？<a id="login2" href="javascript:void(0);" onclick="openlogin()">去登录</a></div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- 广告位：首页top -->
+<script>
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div id="' + s + '"></div>');
+        (window.slotbydup=window.slotbydup || []).push({
+            id: '5941958',
+            container: s,
+            size: '1000,90',
+            display: 'inlay-fix'
+        });
+    })();
+</script>
+
+</body>
+</html>

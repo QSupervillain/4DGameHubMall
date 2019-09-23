@@ -1,0 +1,139 @@
+.hb-popup-container {
+    position: relative;
+    width: 690px;
+    height: 806px;
+    text-align: center;
+    overflow: hidden;
+}
+.hb-popup-container .hb-popup-pic {
+    position: absolute;
+    top: 0;
+    left: 69px;
+}
+.hb-popup-content {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 290px;
+}
+.new-user-welfare h3{
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+.new-user-welfare .welfare-txt {
+    color: #fff;
+    margin-top: 5px;
+}
+.new-user-welfare .welfare-txt span {
+    font-size: 16px;
+}
+.new-user-welfare .welfare-txt div {
+    display: inline-block;
+    width: 15px;
+    margin: 0 5px;
+}
+.new-user-welfare .welfare-txt div em {
+    font-style: normal;
+    display: block;
+    margin: 2px 0;
+    width: 60%;
+    height: 1px;
+    background: #feb99b;
+    animation: identifier .7s ease-out infinite;
+}
+.new-user-welfare .welfare-txt div.left-icon {
+    transform: rotateZ(180deg);
+}
+
+.new-user-welfare .welfare-txt div em:nth-child(2) {
+    width: 80%;
+    animation: identifier2 .7s ease-out infinite;
+}
+
+@keyframes identifier {
+    0% {
+        width: 50%;
+    }
+
+    50% {
+        width: 60%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+@keyframes identifier2 {
+    0% {
+        width: 80%;
+    }
+    50% {
+        width: 70%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+.hb-amount {
+    font-size: 44px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 5px;
+}
+.hb-amount span {
+    font-size: 44px;
+    font-weight: bold;
+    color: #fff;
+}
+.hb-indate {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 5px;
+}
+.hb-indate .hb-indate-time span {
+    font-size: 18px;
+    color: #fff;
+}
+.hb-indate .my-hb-txt {
+    margin: 5px 0;
+    color: #fdda7d;
+    font-size: 14px;
+    position: relative;
+}
+.hb-indate .my-hb-txt::after,
+.hb-indate .my-hb-txt::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 12px;
+    height: 1px;
+    background: #fdda7d;
+    margin-left: -20px;
+}
+.hb-indate .my-hb-txt::after {
+    margin-left: 8px;
+}
+.immediate-use {
+    width: 238px;
+    height: 56px;
+    line-height: 56px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.immediate-use a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #fff;
+    color: #ff3f01;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.41);
+    transition: all .3s;
+}
+.immediate-use a:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.41);
+}

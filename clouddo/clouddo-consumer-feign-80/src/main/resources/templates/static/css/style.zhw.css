@@ -1,0 +1,61 @@
+/*
+* Ajax无刷新分页插件样式
+*/
+.page {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.page a {
+	margin: 0 5px;
+}
+
+.page span {
+	cursor: default;
+}
+
+.page ul {
+	display: inline;
+	list-style: none;
+}
+
+.page ul li {
+	display: inline-block;
+	margin: 0 5px;
+	min-width: 25px;
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid #ccc;
+}
+.page ul li:hover {
+	color: #fff;
+	background-color: #CF3234;
+	border-color: #CF3234;
+	cursor: pointer;
+}
+.page ul .page_current, .page ul .page_current:hover {
+	color: #fff;
+	background-color: #CF3234;
+	border-color: #CF3234;
+	cursor: default;
+}
+
+.page ul li a {
+	
+}
+.page ul li a:hover {
+	color: #fff;
+}
+
+.page_left {
+	
+}
+
+.page_middle {
+	
+}
+
+.page_right {
+	
+}

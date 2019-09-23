@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qbl.dao.ScGameDao">
+    <resultMap type="com.qbl.pojo.ScGame" id="sc_game">
+        <id column="game_id" property="game_id"/>
+        <result column="type_id" property="type_id"/>
+        <result column="account_id" property="account_id"/>
+        <result column="game_title" property="game_title"/>
+        <result column="game_describe" property="game_describe"/>
+        <result column="game_qq" property="game_qq"/>
+        <result column="game_image" property="game_image"/>
+        <result column="game_money" property="game_money"/>
+        <result column="game_time" property="game_time"/>
+        <result column="game_status" property="game_status"/>
+        <result column="game_region" property="game_region"/>
+</resultMap>
+
+    <!-- 根据id查询商品详情 -->
+    <select id="getScGameById" parameterType="int" resultMap="sc_game">
+        SELECT
+            `game_id`,`type_id`,`account_id`,`game_title`,`game_describe`,`game_qq`,
+            `game_image`,`game_money`,`game_time`,`game_status`,`game_region`
+        FROM `sc_game`
+        WHERE `game_id`=#{game_id}
+    </select>
+
+</mapper>

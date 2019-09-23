@@ -5,6 +5,13 @@ server:
 spring:
   application:
     name: clouddo-consumer-feign                         #微服务名  对外暴露微服务的名字
+  thymeleaf:
+    encoding: UTF-8
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+  resources:
+    static-locations: classpath:/templates/
 #注册
 eureka:
   client:                                         #客户端注册进eureka服务列表内

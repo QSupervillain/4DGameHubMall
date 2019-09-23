@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title th:text="${scGame.getGame_title()}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="alternate" media="only screen and(max-width: 640px)" href="/m/zuhao/2558269/">
+    <meta name="mobile-agent" content="format=html5;url=/m/zuhao/2558269/">
+    <meta name="mobile-agent" content="format=xhtml;url=/m/zuhao/2558269/">
+    <link rel="shortcut icon" href="//zuhaowan.zuhaowan.com/v1/images/favicon.ico"/>
+    <!-- 公共的CSS和JS文件 -->
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/base.css"/>
+    <link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/vc_base.css"/>
+    <link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/mypage.css"/>
+    <link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/wdatepicker.css"/>
+    <link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/flexslider.css"/>
+    <link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/zhw-red.css"/>
+    <link rel="stylesheet" href="http://47.102.198.5:22222/mall/css/sharedcard.css">
+
+
+    <script>
+        //声明_czc对象:
+        var _czc = _czc || [];
+        _czc.push(["_setAccount", "1255303859"]);
+    </script>
+    <link rel="stylesheet" href="http://47.102.198.5:22222/mall/css/base_1.css">
+    <link rel="stylesheet" href="http://47.102.198.5:22222/mall/css/common.css">
+    <link rel="stylesheet" href="http://47.102.198.5:22222/mall/css/jquery.mcustomscrollbar.css">
+    <!--//  分页器-->
+    <link href="http://47.102.198.5:22222/mall/css/style.zhw.css" rel="stylesheet" type="text/css"/>
+    <!--拉新红包-->
+    <link rel="stylesheet" href="http://47.102.198.5:22222/mall/css/popup_hb.css"/>
+    <link rel="stylesheet" href="http://47.102.198.5:22222/mall/css/info.css">
+    <link rel="stylesheet" href="http://47.102.198.5:22222/mall/css/info-pop.css">
+    <!--免单活动-->
+    <link rel="stylesheet" href="http://47.102.198.5:22222/mall/css/freesheet.css">
+    <link rel="stylesheet" type="text/css" href="http://47.102.198.5:22222/mall/css/laypage.css"/>
+    <meta name="__hash__" content="6d6bc2f0b46fa444777f328086ad0a21_c528a19d535b7b5251fb132e1375f9f4"/>
+</head>
+<style>
+    .min_money {
+        position: absolute;
+        width: 104px;
+        height: 29px;
+        top: 90px;
+        left: 4px;
+        background: url("http://47.102.198.5:22222/mall/images/min_money_bg.png") no-repeat;
+        color: #fc3737;
+        line-height: 35px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: normal;
+        display: none;
+        z-index: 9;
+    }
+
+    .min_money label {
+        font-size: 14px;
+        font-weight: bold;
+    }
+</style>
+<style>
+    .warm-fixed {
+        position: fixed;
+        top: 230px;
+        left: 94px;
+        width: 250px;
+        height: 380px;
+        background: url("http://47.102.198.5:22222/mall/images/info-left-gg.png") no-repeat;
+        z-index: 998;
+        display: none;
+    }
+
+    .warm-info-close {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 2px;
+        top: 0;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    /* 店铺红包新增 */
+    .shophb-wrap {
+        width: 500px;
+    }
+
+    .shophb-wrap .shophb-item {
+        display: inline-block;
+        height: 16px;
+        line-height: 16px;
+        color: #fc3737;
+        font-size: 12px;
+        cursor: pointer;
+        border-top: 1px solid #fc3737;
+        border-bottom: 1px solid #fc3737;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 0 7px;
+        position: relative;
+    }
+
+    .shophb-wrap .shophb-item.active {
+        background-color: #fde1e1;
+    }
+
+    .shophb-wrap .shophb-item:last-child {
+        margin-right: 0;
+    }
+
+    .shophb-wrap .shophb-item::before,
+    .shophb-wrap .shophb-item::after {
+        position: absolute;
+        content: '';
+        width: 3px;
+        height: 18px;
+        top: -1px;
+        background: url(http://47.102.198.5:22222/mall/images/red_lt.png) no-repeat;
+    }
+
+    .shophb-wrap .shophb-item::before {
+        left: -1px;
+        background-position: 0 0;
+    }
+
+    .shophb-wrap .shophb-item::after {
+        right: -1px;
+        background-position: -3px 0;
+    }
+</style>
+<body>
+<link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/jquery.mcustomscrollbar_1.css"/>
+<link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/zhw_global_top.94120e6766a5a440.css"/>
+<!-- 如果没有引用jquery，则在此处引用 -->
+<div id="top_top">
+    <div class="zhw-header">
+        <div class="header-content">
+            <a href="/" class="header-left">
+                <i class="index-sprite home-icon"></i>
+                <span class="header-wel">您好，欢迎来到4DGAM卖号网</span>
+            </a>
+            <div class="header-right fr">
+                <div class="header-personal">
+                    <div class="header-msg-box">
+                        <div class="header-msg">
+                            <div class="header-msg-box login-top"><!--<meta charset="UTF-8">-->
+                                <a class="header-text ml23 fl" title="请登录" href="/login/"
+                                   onclick="_czc.push(['_trackEvent','列表页','请登录','顶部']);_hmt.push(['_trackEvent', '公共区域', '顶部栏', '请登录']);">请登录</a>
+                                <span class="header-line fl ml24"></span>
+                                <a class="header-text ml23 fl" title="注册" href="/login/register.html"
+                                   onclick="_czc.push(['_trackEvent','列表页','注册','顶部']);_hmt.push(['_trackEvent', '公共区域', '顶部栏', '注册有礼']);">注册</a>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/zhw_global_top.94120e6766a5a440.css"/>
+</div>
+
+<div class="zhw-top">
+    <div class="zhw-search">
+        <div class="zhw-logo fl">
+            <a hideFocus href="/" onclick="_hmt.push(['_trackEvent', '通用', 'logo']);">
+                <img src="http://47.102.198.5:22222/mall/picture/zhw-logo.png" class="fl" alt="租号玩Logo">
+            </a>
+        </div>
+
+        <form id="gameSearchForm" action="/zuhao/" name="gameSearchForm" method="post">
+            <div class="fr">
+                <div class="index-search fl">
+                    <div class="se-lease-input">
+                        <input type="text" class="zhw-se-val serch_content" placeholder="请输入关键词" name="keyWords"
+                               autocomplete="off" value="">
+                        <!--<input type="hidden" id="game_Id" name="game_Id" value=""/>-->
+                        <input type="hidden" name="gameDataChoose" value=""/>
+                        <div class="se-focus-toggle" id="se-focus-toggle" style="display: none;">
+                            <div class="se-focus-flex fl">
+                                <p class="se-focus-title">租号玩热搜</p>
+                                <div class="hot-item-box">
+                                    <a href="javascript:;" class="hot-item">绝地求生<i
+                                            class="index-sprite hot-icon"></i></a></div>
+                            </div>
+                            <div class="se-flex-line"></div>
+                            <div class="se-focus-flex fl">
+                                <p class="se-focus-title" style="color: #808080;">
+                                    搜索历史
+                                    <i class="index-sprite history-del-icon"></i>
+                                </p>
+
+                                <div class="history-item-box" id="ss_history"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--E 搜索历史 -->
+                <div class="fl">
+                    <input class="zhw-se-btn" type="submit" id="searchBtn" value="搜索">
+                </div>
+            </div>
+            <input type="hidden" name="__hash__"
+                   value="6d6bc2f0b46fa444777f328086ad0a21_c528a19d535b7b5251fb132e1375f9f4"/></form>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="info-container">
+    <div class="info-crumbs">
+        <div class="crumbs-item fl">
+            <a href="/">租号玩首页</a>
+            <i class="info-icon"></i>
+            <a href="/zuhao-17/" title="英雄联盟">英雄联盟</a>
+            <i class="info-icon"></i>
+            <a href="/zuhao/2558269.html"
+               style="max-width: 840px" class="a-line" th:href="${scGame.getGame_id()}" th:text="${scGame.getGame_title()}">
+            </a>
+
+        </div>
+
+        <div class="dp-entrance fr"><!--
+            <div class="dp-exhibition">
+                <span class="dp-btn-s fl">店铺</span>
+                <span class="dp-text-s a-line">英雄联盟全区有号</span>
+            </div>-->
+
+            <div class="dp-toggle">
+                <div class="dp-arrow-up"></div>
+                <div class="dp-toggle-top">
+                    <!-- <div class="fl">
+                         <span class="dp-text-s fw a-line fl">英雄联盟全区有号</span>
+                         <span class="dp-btn-s fl">店铺</span>
+                     </div>-->
+
+                    <div class="icon-star-item">
+                        <i class="info-icon i-star-f"></i>
+                        <i class="info-icon i-star-f"></i>
+                        <i class="info-icon i-star-f"></i>
+                        <i class="info-icon i-star-f"></i>
+                        <i class="info-icon i-star-f"></i>
+                    </div>
+
+                    <div class="icon-star-item icon-star-active">
+
+                    </div>
+                </div>
+
+                <div class="dp-toggle-rep">
+                    <a class="dp-rep-flex" href="http://www.zuhaowan.com/News/111.html">
+                                                    <span style="margin-top: 0;">
+                                <img alt="11级" src="http://47.102.198.5:22222/mall/picture/11.png"/>                            </span> <span>店铺信誉</span>
+                    </a>
+
+                    <div class="dp-rep-flex">
+                        <em>78%</em>
+                        <span>好评率</span>
+                    </div>
+                </div>
+
+                <div class="dp-btn-box clearfix">
+                    <div class="dp-btn-flex">
+                        <a class="dp-btn dp-btn-rk" href="/dianpu/10892.html" target="_blank">进入店铺</a>
+                    </div>
+                    <div class="dp-btn-flex">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="info-main">
+        <input type="hidden" id="info_equipment"
+               value="gd_41_0,gd_44_0,gd_53_0,gd_343_0,gd_350_0,gd_355_0,gd_368_0,gd_375_0,gd_379_0,gd_392_0,gd_396_0,gd_406_0,gd_410_0,gd_417_0,gd_424_0,gd_430_0,gd_436_0,gd_442_0,gd_449_0,gd_456_0,gd_468_0,gd_476_0,gd_491_0,gd_498_0,gd_505_0,gd_517_0,gd_527_0,gd_532_0,gd_539_0,gd_547_0,gd_555_0,gd_564_0,gd_580_0,gd_585_0,gd_600_0,gd_604_0,gd_608_0,gd_616_0,gd_637_0,gd_647_0,gd_652_0,gd_655_0,gd_672_0,gd_681_0,gd_693_0,gd_702_0,gd_709_0,gd_720_0,gd_727_0,gd_735_0,gd_745_0,gd_759_0,gd_764_0,gd_773_0,gd_780_0,gd_790_0,gd_797_0,gd_803_0,gd_812_0,gd_820_0,gd_825_0,gd_831_0,gd_839_0,gd_846_0,gd_858_0,gd_865_0,gd_874_0,gd_884_0,gd_904_0,gd_916_0,gd_920_0,gd_930_0,gd_939_0,gd_943_0,gd_948_0,gd_954_0,gd_967_0,gd_977_0,gd_983_0,gd_991_0,gd_997_0,gd_1001_0,gd_1009_0,gd_1017_0,gd_1023_0,gd_1035_0,gd_1040_0,gd_1049_0,gd_1052_0,gd_1060_0,gd_1063_0,gd_1077_0,gd_1081_0,gd_1091_0,gd_1119_0,gd_1133_0,gd_1138_0,gd_1155_0,gd_1161_0,gd_1170_0,gd_1175_0,gd_1182_0,gd_415_0,gd_474_0,gd_499_0,gd_542_0,gd_701_0,gd_711_0,gd_733_0,gd_747_0,gd_805_0,gd_818_0,gd_882_0,gd_906_0,gd_912_0,gd_940_0,gd_988_0,gd_1014_0,gd_1286_0,gd_4893_0,gd_4894_0,gd_4897_0,">
+        <div class="info-main-left">
+            <div class="info-pic-box">
+                <img th:src="${scGame.getGame_image()}" width="400" height="400" alt=""/>
+                <div id="showbox" class="info-pic-show" style="display: none;">
+                    <img src="http://47.102.198.5:22222/mall/picture/5cad44bc6f001.jpg" width="400" height="400" alt=""/>
+                </div>
+                <div class="info-thumb-con">
+                    <div id="showlast" class="i-thumb-icon showlast"> &lt;</div>
+                    <div id="shownext" class="i-thumb-icon shownext"> &gt;</div>
+                    <div id="showsum" class="info-pic-num"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <form name="rentForm" action="/Search/actOrderRent.html" method="post" class="info-main-right">
+            <div class="info-title" th:text="${scGame.getGame_title()}">
+            </div>
+            <div class="info-dist" th:text="${scGame.getGame_region()}"></div>
+          <!--  账号id-->
+            <span th:name="${scGame.getGame_id()}"></span>
+            <div class="account-box" style="min-height:150px;height: auto;">
+                <ul>
+                    <li>
+                        <div class="fl mr12">
+                            <i class="info-icon icon-rz1"></i>
+                            <span class="fs12">手机已认证</span>
+                        </div>
+                        <div class="fl">
+                            <i class="info-icon icon-rz2"></i>
+                            <span class="fs12">身份已认证</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fl">服务承诺：</span>
+
+                        <div class="fl">
+
+                                                            <span class="info-label">商
+                                    <div class="ant-tooltip-content">
+                                        <div class="ant-tooltip-arrow"></div>
+                                        <div class="ant-tooltip-inner">
+                                            <span>4DGAM认证商家代表着诚信、专业、快捷。给租号方带来安全、快捷的体验。</span>
+                                        </div>
+                                    </div>
+                                </span> <span class="info-label">赔
+                                    <div class="ant-tooltip-content">
+                                        <div class="ant-tooltip-arrow"></div>
+                                        <div class="ant-tooltip-inner">
+                                            <span>说明卖家已经缴付了8元给租号玩，金额用于错误赔付。</span>
+                                        </div>
+                                    </div>
+                                </span> <span class="info-label">店
+                                    <div class="ant-tooltip-content">
+                                        <div class="ant-tooltip-arrow"></div>
+                                        <div class="ant-tooltip-inner">
+                                            <span>4DGAM官方认证店铺，代表着实力、专业和权威，给租号方提供更优质、更全面的服务。</span>
+                                        </div>
+                                    </div>
+                                </span> <span class="info-label info-benefit" data-lb="">惠</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fl" >卖家qq：</span>
+                        <span class="fl" th:text="${scGame.getGame_qq()}"></span>
+                    </li>
+                    <li>
+                        <span class="fl" >上架时间：</span>
+                        <span class="fl" th:text="${#dates.format(scGame.getGame_time(),'yyyy-MM-dd HH:mm:ss')}"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-rent-box">
+                <div class="info-icon info-rent-item no-s active" data-rt="1"
+                     onclick="_hmt.push(['_trackEvent', '账号详情', '卖号', '价值']);">
+                    <div class="info-rent-type">价值</div>
+                    <div class="info-rent-money">
+                        <span class="inf-dis-money">
+                            <em>￥</em>
+                            <span th:text="${scGame.getGame_money()}">
+                                1.10                            </span>
+                        </span>
+                    </div>
+                </div>
+
+
+                <input type="hidden" name="gh" value="2"/><!-- 精品账号标示 -->
+                <input type="hidden" name="id" value="2558269"/>
+                <input type="hidden" id="rentType" name="rentType" value="1"/><!-- 租赁类型 -->
+                <!--存放推广id-->
+                <input type="hidden" name="searchcomefromid"/>
+
+                <div class="info-deposit" style="margin-top: 25px;">
+                    <div class="fl">
+
+                        <p class="info-wx-tips">
+
+                            温馨提示：
+                            购买完账号后一定要记得更换绑手机号，邮箱验证等等！                                                </br>大部分游戏<span
+                                style="color:#fc3737;font-size: 12px;">不支持XP和Vista系统</span>，请确认电脑配置，以免影响游戏体验 </p>
+
+                    </div>
+                </div>
+
+                <input type="button" value="立即购买"
+                       onclick="rentNow();_czc.push(['_trackEvent','账号详情页','立即租用预约']);_hmt.push(['_trackEvent', '账号详情', '立即租用']);"
+                       class="info-rent-btn"/>
+
+                <!-- 免单抽奖按钮 -->
+                <div>
+
+                </div>
+            </div>
+
+            <div class="info-msg" style="position: relative;left: -445.5px;top: 0px;">
+                <div class="info-msg-main">
+                    <ul class="main_title">
+                        <li class="active" onclick="_hmt.push(['_trackEvent', '账号截图', '账号截图']);">
+                            账号截图
+                            <span></span>
+                        </li>
+                        <!--                <li onclick="_hmt.push(['_trackEvent', '账号详情', '用户评价']);">
+                                            用户评价 0                    <span></span>
+                                        </li>-->
+
+                        <input type="button" value="立即购买/预约"
+                               onclick="rentNow();_czc.push(['_trackEvent','账号详情页','立即预约'])" class="at_once_rent"/><br/>
+                    </ul>
+                    <div class="main_con_box">
+                        <div class="account_msg_box">
+                            <div class="key_msg_box">
+                                <div class="key_msg2" th:utext="${scGame.getGame_describe()}">
+                                </div>
+                            </div>
+                            <img th:src="${scScreenshot.getScreenshot_src()}" alt=""/>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+        <!-- 喇叭 -->
+        <div class="zhw-trumpet" id="zhw-trumpet"></div>
+    </div>
+
+</body>
+</html>

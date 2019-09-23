@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qbl.dao.AccountDao">
+
+    <resultMap id="sc_account" type="com.qbl.pojo.Account">
+        <id property="account_id" column="account_id"/>
+        <result property="account_name" column="account_name"/>
+        <result property="account_pwd" column="account_pwd"/>
+    </resultMap>
+
+    <select id="findById" parameterType="Integer" resultMap="sc_account">
+        SELECT account_id, account_name, account_pwd FROM sc_account
+        WHERE account_id = #{id}
+    </select>
+
+
+</mapper>

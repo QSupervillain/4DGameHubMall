@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <settings>
+        <!--驼峰命名法  -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--主键自动增加  -->
+        <setting name="useGeneratedKeys" value="true"/>
+        <!--自动映射行为  -->
+        <setting name="autoMappingBehavior" value="FULL"/>
+        <!--开启二级缓存  -->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+</configuration>

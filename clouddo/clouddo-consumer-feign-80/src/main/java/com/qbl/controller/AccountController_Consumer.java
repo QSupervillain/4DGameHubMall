@@ -20,6 +20,7 @@ public class AccountController_Consumer {
 
     @RequestMapping("/consumer/account/get/{id}")
     public Account get(@PathVariable("id") Integer id) {
+        System.out.println("cnmd");
         return service.get(id);
     }
 

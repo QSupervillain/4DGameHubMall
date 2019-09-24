@@ -21,9 +21,9 @@ public class ScGameController_Consumer {
     private MallClientService mallClientService;
 
     @RequestMapping("/consumer/getScGameById/{game_id}")
-    public String getScGameById(Model model,@PathVariable("game_id")int game_id){
+    public String getScGameById(Model model,@PathVariable("game_id")String game_id){
         System.out.println("进入.................");
-        ScGame scGame= mallClientService.getScGameById(game_id);
+        ScGame scGame= mallClientService.getScGameById(Integer.valueOf(game_id));
         /*System.out.println("qq:"+scGame.getGame_qq());
         System.out.println("上架时间:"+scGame.getGame_time());*/
         System.out.println("id:"+scGame.getGame_id());

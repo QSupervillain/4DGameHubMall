@@ -58,7 +58,7 @@
                 for (var i=0;i<mk.length;i++){
                     li+="<tr>";
                     li+="<td width=\"100\" style=\"position:relative;\">";
-                    li+="<a class=\"list-img\" href=\"/zuhao/3345747.html\" target=\"_blank\"";
+                    li+="<a class=\"list-img\" href='#' target=\"_blank\"";
                     li+="title=\""+mk[i].game_title+"\" style=\"position:relative;\"";
                     li+="onclick=\"_hmt.push(['_trackEvent', '租号大厅', '游戏账号', '账号详情']);\">";
                     li+="<img class=\"table-img\"";
@@ -66,7 +66,7 @@
                     li+=" alt=\"\">";
                     li+="</a>";
                     li+="</td>";
-                    li+="<td width=\"420\" onclick=\"window.open('/zuhao/3345747.html')\"";
+                    li+="<td width=\"420\" onclick=\"window.open('/consumer/getScGameById/"+mk[i].game_id+"')\"";
                     li+="style=\"text-align:left;position:relative; cursor:pointer;\">";
                     li+="<div class=\"list1\">";
                     li+="<div style=\"width:430px;color:#000;\" class=\"zuspan zuSan\"";
@@ -76,10 +76,10 @@
                     li+="<div class=\"list1-info-game\" style=\"cursor: pointer;\">"+mk[i].game_region+"</div>";
                     li+="</div>";
                     li+="</td>";
-                    li+="<td width=\"140\" onclick=\"window.open('/zuhao/3345747.html')\" style=\"cursor:pointer;\">";
+                    li+="<td width=\"140\" onclick=\"window.open('/consumer/getScGameById/"+mk[i].game_id+"')\" style=\"cursor:pointer;\">";
                     li+="<div class=\"list3\">";
                     li+="<div class=\"clear\"></div>";
-                    li+="<button onclick=\"window.open('/zuhao/3345747.html');_hmt.push(['_trackEvent', '租号大厅', '游戏账号', '账号详情']);\">";
+                    li+="<button onclick=\"window.open('/consumer/getScGameById/"+mk[i].game_id+"');_hmt.push(['_trackEvent', '租号大厅', '游戏账号', '账号详情']);\">";
                     li+="立即购买";
                     li+="</button>";
                     li+=" </div>";

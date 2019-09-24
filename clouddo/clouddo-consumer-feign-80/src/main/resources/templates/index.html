@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+﻿﻿<!DOCTYPE html>
+<html>
 <head>
     <meta http-equiv="Cache-Control" content="no-transform"/>
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <title>4DGAM卖号网</title>
+    <title>买号大厅_买号_借号_买号平台_游戏帐号-买号玩</title>
     <!-- 公共的CSS和JS文件 -->
     <!-- css -->
     <link type="text/css" rel="stylesheet" href="static/css/base.css"/>
@@ -37,9 +37,82 @@
         }
     </style>
 </head>
+<script src="http://47.102.198.5:22222/js/jquery-1.8.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var i=1;
+    var pageIndex=1;
+    $(function () {
+        type();
+        fenye(i);
+    })
+    function fenye(i) {
+        $.ajax({
+            url: '/list',
+            async: false,
+            dataType: 'json',
+            data: {'index': pageIndex, 'typeid': i},
+            success: function (a) {
+                var mk=a.list
+                $("#AccountList tr").remove();
+                var li="";
+                for (var i=0;i<mk.length;i++){
+                    li+="<tr>";
+                    li+="<td width=\"100\" style=\"position:relative;\">";
+                    li+="<a class=\"list-img\" href=\"/zuhao/3345747.html\" target=\"_blank\"";
+                    li+="title=\""+mk[i].game_title+"\" style=\"position:relative;\"";
+                    li+="onclick=\"_hmt.push(['_trackEvent', '租号大厅', '游戏账号', '账号详情']);\">";
+                    li+="<img class=\"table-img\"";
+                    li+="src="+mk[i].game_image+"";
+                    li+=" alt=\"\">";
+                    li+="</a>";
+                    li+="</td>";
+                    li+="<td width=\"420\" onclick=\"window.open('/zuhao/3345747.html')\"";
+                    li+="style=\"text-align:left;position:relative; cursor:pointer;\">";
+                    li+="<div class=\"list1\">";
+                    li+="<div style=\"width:430px;color:#000;\" class=\"zuspan zuSan\"";
+                    li+="title=\""+mk[i].game_title+"\">";
+                    li+=""+mk[i].game_title+"";
+                    li+="</div>";
+                    li+="<div class=\"list1-info-game\" style=\"cursor: pointer;\">"+mk[i].game_region+"</div>";
+                    li+="</div>";
+                    li+="</td>";
+                    li+="<td width=\"140\" onclick=\"window.open('/zuhao/3345747.html')\" style=\"cursor:pointer;\">";
+                    li+="<div class=\"list3\">";
+                    li+="<div class=\"clear\"></div>";
+                    li+="<button onclick=\"window.open('/zuhao/3345747.html');_hmt.push(['_trackEvent', '租号大厅', '游戏账号', '账号详情']);\">";
+                    li+="立即购买";
+                    li+="</button>";
+                    li+=" </div>";
+                    li+="<div class=\"clear\"></div>";
+                    li+="</td>";
+                    li+="</tr>";
+                }
+                $("#AccountList").append(li);
+            }
+        })
+    }
+    function type() {
+        $.ajax({
+            url: '/consumer/sc/list',
+            async: false,
+            dataType: 'json',
+            success: function (tp) {
+                var li = ""
+                for (var i=0;i<tp.length;i++){
+                    li+="<a href='#' class='searchLiA' title='穿越火线买号' onclick=fenye("+tp[i].type_id+");>"
+                    li+="<img src="+tp[i].type_image+" title=\"穿越火线买号\"/>"
+                    li+="<span>"+tp[i].type_name+"</span>"
+                    li+="</a>"
+                }
+                $("#aa").append(li);
+            }
+        })
+    }
+</script>
 <body style="background:#f5f5f5;">
 
 <div class="Androidios" style="display:none;">
+    <a></a>
     <div class="gameselect">
         <a href="javascript:void(0);" onclick="searchsy('1')" title=""><img src="static/picture/android.png"
                                                                             alt=""/></a>
@@ -74,7 +147,7 @@
         <div class="header-content">
             <a href="/" class="header-left">
                 <i class="index-sprite home-icon"></i>
-                <span class="header-wel">您好，欢迎来4DGAM到买号网</span>
+                <span class="header-wel">您好，欢迎来到买号玩</span>
             </a>
             <div class="header-right fr">
                 <div class="header-personal">
@@ -83,10 +156,86 @@
                             <div class="header-msg-box login-top"><!--<meta charset="UTF-8">-->
                                 <a class="header-text ml23 fl" title="请登录" href="/login/"
                                    onclick="_czc.push(['_trackEvent','列表页','请登录','顶部']);_hmt.push(['_trackEvent', '公共区域', '顶部栏', '请登录']);">请登录</a>
-                                        <span class="header-line fl ml24"></span>
-                                <a class="header-text ml23 fl" title="注册" href="/login/register.html"
-                                   onclick="_czc.push(['_trackEvent','列表页','注册','顶部']);_hmt.push(['_trackEvent', '公共区域', '顶部栏', '注册有礼']);">注册</a>
+                                <a class="header-text ml23 fl" title="注册有礼" href="/login/register.html"
+                                   onclick="_czc.push(['_trackEvent','列表页','注册有礼','顶部']);_hmt.push(['_trackEvent', '公共区域', '顶部栏', '注册有礼']);">注册有礼</a>
                             </div>
+
+                            <span class="header-line fl ml24"></span>
+                            <a class="header-text fl ml24" href="http://club.zuhaowan.com/" target="_blank"
+                               onclick="_hmt.push(['_trackEvent', '公共区域', '顶部栏', '论坛中心']);">论坛中心</a>
+                            <div class="header-nav ml20">
+                                <a href="/help.html" class="fl lh40"
+                                   onclick="_hmt.push(['_trackEvent', '公共区域', '顶部栏', '帮助中心']);">
+                                    <span class="header-text">帮助中心</span>
+                                    <i class="icon-san"></i>
+                                </a>
+
+                                <div class="header-toggle">
+                                    <div class="tkbox tkbox1">
+                                        <div class="aSty01">
+                                            <div class="clear"></div>
+                                            <div class="asty_box">新手帮助</div>
+                                            <div class="clear"></div>
+                                            <div class="asty_box1"><a href="/help/7.html"
+                                                                      title="新手必读">新手必读&nbsp;&nbsp;</a>|<a
+                                                    href="/help/4.html" title="注册及认证">&nbsp;&nbsp;注册及认证</a><br><a
+                                                    href="/help/5.html" title="如何发布账号">如何发布账号&nbsp;&nbsp;</a>|<a
+                                                    href="/help/6.html" title="如何买用账号">&nbsp;&nbsp;如何买用账号</a></div>
+                                            <div class="clear"></div>
+                                            <div class="asty_box">买号学堂</div>
+                                            <div class="clear"></div>
+                                            <div class="asty_box1"><a href="/help/158.html"
+                                                                      title="什么是“商”">什么是“商”&nbsp;</a>|<a
+                                                    href="/help/165.html" title="什么是“保”">&nbsp;&nbsp;什么是“保”</a><br><a
+                                                    href="/help/166.html" title="什么是“赔”">什么是“赔”&nbsp;</a>|<a
+                                                    href="/help/156.html" title="什么是货架">&nbsp;&nbsp;什么是货架</a></div>
+                                            <div class="clear"></div>
+                                            <div class="clear"></div>
+                                            <div class="asty_box">了解规则</div>
+                                            <div class="clear"></div>
+                                            <div class="asty_box1">
+                                                <a href="/help/45.html" title="买号玩收费标准">买号玩收费标准</a><br>
+                                                <a href="/help/193.html" title="如何推荐好友">如何推荐好友</a><br>
+                                                <a href="/help/194.html" title="如何成为认证商家">如何成为认证商家</a><br>
+                                                <a href="/help/33.html" title="买号玩仲裁规则">买号玩仲裁规则 </a><br>
+                                                <a href="/help/26.html" title="如何解封买号玩账号">如何解封买号玩账号</a><br>
+                                                <a href="/help/196.html" title="取消预约收费标准">取消预约收费标准</a>
+                                            </div>
+                                            <!--0703 web1.2-->
+                                            <div class="clear"></div>
+                                            <div class="asty_box web-add">
+                                                <div class="web-add-con"><a href="/guestbook/" target="_blank"
+                                                                            onclick="_czc.push(['_trackEvent','公共导航栏','投诉建议','顶部'])">投诉建议</a>
+                                                </div>
+                                                <div class="web-add-con"><a href="/Message/BugSubmit/orderid/1.html"
+                                                                            target="_blank"
+                                                                            onclick="_czc.push(['_trackEvent','公共导航栏','用户反馈','顶部'])">用户反馈</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-nav ml20">
+                                <a href="/about/" class="fl lh40"
+                                   onclick="_hmt.push(['_trackEvent', '公共区域', '顶部栏', '关于我们']);">
+                                    <span class="header-text">关于我们</span>
+                                    <i class="icon-san"></i>
+                                </a>
+
+                                <div class="header-toggle">
+                                    <div class="tkbox tkbox1" style="width:145px;">
+                                        <div class="aSty01">
+                                            <a href="/news/introduce.html" title="了解我们">了解我们&nbsp;&nbsp;</a>|
+                                            <a href="/news/disclaimer.html" title="免责声明">&nbsp;免责声明</a><br>
+                                            <a href="/guestbook/" title="在线留言">在线留言&nbsp;&nbsp;</a>|
+                                            <a href="/news/22.html" title="招贤纳士">&nbsp;招贤纳士</a><br>
+                                            <a href="/news/contactus.html" title="联系我们">联系我们&nbsp;&nbsp;</a>|
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="clear"></div>
                         </div>
 
@@ -107,7 +256,7 @@
             <a hideFocus href="/" onclick="_hmt.push(['_trackEvent', '通用', 'logo']);">
                 <img src="static/picture/zhw-logo.png" class="fl" alt="买号玩Logo">
             </a>
-            <span class="logo-text fl"></span></div>
+            <span class="logo-text fl">专业的游戏服务平台</span></div>
 
         <form id="gameSearchForm" action="/zuhao/" name="gameSearchForm" method="post">
             <div class="fr">
@@ -164,82 +313,7 @@
 
                 <div class="serchlist" style="position: relative;">
                     <span class="title advance-title">热门推荐：</span>
-                    <div class="con con-img active">
-                        <a href="/zuhao-11/" class="searchLiA
-                                    " title="穿越火线买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '穿越火线']);">
-                            <img src="static/picture/5c91d3d5a941f.png" title="穿越火线买号"/>
-                            <span>穿越火线</span>
-                        </a> <a href="/zuhao-17/" class="searchLiA
-                                    " title="英雄联盟买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '英雄联盟']);">
-                        <img src="static/picture/5c91d3e49f446.png" title="英雄联盟买号"/>
-                        <span>英雄联盟</span>
-                    </a> <a href="/zuhao-581/" class="searchLiA
-                                    " title="绝地求生买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '绝地求生']);">
-                        <img src="static/picture/5c91d3cfe2667.png" title="绝地求生买号"/>
-                        <span>绝地求生</span>
-                    </a> <a href="/zuhao-443/" class="searchLiA
-                                    " title="王者荣耀买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '王者荣耀']);">
-                        <img src="static/picture/5c91d401adb5e.png" title="王者荣耀买号"/>
-                        <span>王者荣耀</span>
-                    </a> <a href="/zuhao-24/" class="searchLiA
-                                    " title="逆战买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '逆战']);">
-                        <img src="static/picture/5c91d4085f408.png" title="逆战买号"/>
-                        <span>逆战</span>
-                    </a> <a href="/zuhao-446/" class="searchLiA
-                                    " title="穿越火线:枪战王者买号"
-                            onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '穿越火线:枪战王者']);">
-                        <img src="static/picture/5c91d3f12fc86.png" title="穿越火线:枪战王者买号"/>
-                        <span>穿越火线:枪战王者</span>
-                    </a> <a href="/zuhao-25/" class="searchLiA
-                                    " title="QQ飞车买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', 'QQ飞车']);">
-                        <img src="static/picture/5c91d3f993127.png" title="QQ飞车买号"/>
-                        <span>QQ飞车</span>
-                    </a> <a href="/zuhao-636/" class="searchLiA
-                                    " title="QQ飞车手游买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', 'QQ飞车手游']);">
-                        <img src="static/picture/5c91d4132b0f4.png" title="QQ飞车手游买号"/>
-                        <span>QQ飞车手游</span>
-                    </a> <a href="/zuhao-22/" class="searchLiA
-                                    " title="反恐精英OL买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '反恐精英OL']);">
-                        <img src="static/picture/5c91d422cb494.png" title="反恐精英OL买号"/>
-                        <span>反恐精英OL</span>
-                    </a> <a href="/zuhao-441/" class="searchLiA
-                                    " title="侠盗猎车手Online买号"
-                            onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '侠盗猎车手Online']);">
-                        <img src="static/picture/5c91d46976180.png" title="侠盗猎车手Online买号"/>
-                        <span>侠盗猎车手Online</span>
-                    </a> <a href="/zuhao-74/" class="searchLiA
-                                    " title="守望先锋买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '守望先锋']);">
-                        <img src="static/picture/5c91d42b6854b.png" title="守望先锋买号"/>
-                        <span>守望先锋</span>
-                    </a> <a href="/zuhao-16/" class="searchLiA
-                                    " title="地下城与勇士买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '地下城与勇士']);">
-                        <img src="static/picture/5c91d43c10600.png" title="地下城与勇士买号"/>
-                        <span>地下城与勇士</span>
-                    </a> <a href="/zuhao-560/" class="searchLiA
-                                    " title="火影忍者（手游）买号"
-                            onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '火影忍者（手游）']);">
-                        <img src="static/picture/5c91d45009336.png" title="火影忍者（手游）买号"/>
-                        <span>火影忍者（手游）</span>
-                    </a> <a href="/zuhao-26/" class="searchLiA
-                                    " title="加速器买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '加速器']);">
-                        <img src="static/picture/5c91d3dde39d8.png" title="加速器买号"/>
-                        <span>加速器</span>
-                    </a> <a href="/zuhao-449/" class="searchLiA
-                                    " title="球球大作战买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '球球大作战']);">
-                        <img src="static/picture/5c91d419b4f18.png" title="球球大作战买号"/>
-                        <span>球球大作战</span>
-                    </a> <a href="/zuhao-23/" class="searchLiA
-                                    " title="YY号码买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', 'YY号码']);">
-                        <img src="static/picture/5c91d458973ba.png" title="YY号码买号"/>
-                        <span>YY号码</span>
-                    </a> <a href="/zuhao-36/" class="searchLiA
-                                    " title="枪神纪买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '枪神纪']);">
-                        <img src="static/picture/5a7ad1223d1ed.png" title="枪神纪买号"/>
-                        <span>枪神纪</span>
-                    </a> <a href="/zuhao-30/" class="searchLiA
-                                    " title="影视专区买号" onclick="_hmt.push(['_trackEvent', '买号大厅', '热门推荐', '影视专区']);">
-                        <img src="static/picture/5a7ad08e9fc8a.png" title="影视专区买号"/>
-                        <span>影视专区</span>
+                    <div class="con con-img active" id="aa">
                     </a>
                     </div>
                     <!--0605 热门推荐增加文字推荐 选中游戏后无active类-->
@@ -335,38 +409,30 @@
                 <!--店铺轮播结束-->
                 <table width="100%" cellspacing="0" cellpadding="0" border="0" class="epic_s">
                     <tbody id="AccountList">
-                    <tr>
-                        <td width="100" style="position:relative;">
-                            <a class="list-img" href="/zuhao/3345747.html" target="_blank"
-                               title="65把枪皮★赤红M4霜寒98K极速AK★雪地满套哈利小丑狮子" style="position:relative;"
-                               onclick="_hmt.push(['_trackEvent', '租号大厅', '游戏账号', '账号详情']);">
-                                <img class="table-img"
-                                     src="//zhwpic.zuhaowan.com/images/game_data_img/2019-04-09/5cac3b0b9f4dd.jpg"
-                                     alt="">
-                            </a>
-
-
-                        </td>
-                        <td width="420" onclick="window.open('/zuhao/3345747.html')"
-                            style="text-align:left;position:relative; cursor:pointer;">
-                            <div class="list1">
-                                <div style="width:430px;color:#000;" class="zuspan zuSan"
-                                     title="65把枪皮★赤红M4霜寒98K极速AK★雪地满套哈利小丑狮子">
-                                    65把枪皮★赤红M4霜寒98K极速AK★雪地满套哈利小丑狮子
-                                </div>
-                                <div class="list1-info-game" style="cursor: pointer;">绝地求生/全区/全服</div>
-                            </div>
-                        </td>
-                        <td width="230" onclick="window.open('/zuhao/3345747.html')" style="cursor:pointer;">
-                            <div class="list2">
-                                <div class="table-rent-money">3.3元/小时</div>
-                            </div>
-                            <div class="clear"></div>
-                        </td>
+<!--                    <tr>-->
+<!--                        <td width="100" style="position:relative;">-->
+<!--                            <a class="list-img" href="/zuhao/3345747.html" target="_blank"-->
+<!--                               title="65把枪皮★赤红M4霜寒98K极速AK★雪地满套哈利小丑狮子" style="position:relative;"-->
+<!--                               onclick="_hmt.push(['_trackEvent', '租号大厅', '游戏账号', '账号详情']);">-->
+<!--                                <img class="table-img"-->
+<!--                                     src="//zhwpic.zuhaowan.com/images/game_data_img/2019-04-09/5cac3b0b9f4dd.jpg"-->
+<!--                                     alt="">-->
+<!--                            </a>-->
+<!--                        </td>-->
+<!--                        <td width="420" onclick="window.open('/zuhao/3345747.html')"-->
+<!--                            style="text-align:left;position:relative; cursor:pointer;">-->
+<!--                            <div class="list1">-->
+<!--                                <div style="width:430px;color:#000;" class="zuspan zuSan"-->
+<!--                                     title="65把枪皮★赤红M4霜寒98K极速AK★雪地满套哈利小丑狮子">-->
+<!--                                    65把枪皮★赤红M4霜寒98K极速AK★雪地满套哈利小丑狮子-->
+<!--                                </div>-->
+<!--                                <div class="list1-info-game" style="cursor: pointer;">绝地求生/全区/全服</div>-->
+<!--                            </div>-->
+<!--                        </td>-->
                         <td width="140" onclick="window.open('/zuhao/3345747.html')" style="cursor:pointer;">
                             <div class="list3">
                                 <div class="clear"></div>
-                                <button onclick="window.open('/zuhao/3345747.html';)_hmt.push(['_trackEvent', '租号大厅', '游戏账号', '账号详情']);">
+                                <button onclick="window.open('/zuhao/3345747.html');_hmt.push(['_trackEvent', '租号大厅', '游戏账号', '账号详情']);">
                                     立即购买
                                 </button>
                             </div>

@@ -1,10 +1,10 @@
 package com.qbl.service;
 
-import com.qbl.pojo.Account;
-import com.qbl.pojo.ScGame;
-import com.qbl.pojo.ScScreenshot;
+import com.qbl.pojo.*;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * @Author ：大大怪将军
@@ -30,6 +30,16 @@ public class MallClientServiceFallbackFactory implements FallbackFactory<MallCli
             @Override
             public ScScreenshot getScScreenshotById(int game_id) {
                 return new ScScreenshot().setGame_id(game_id).setScreenshot_src("FallbackFactory@@@该ID:" + game_id + "没有对应的信息，检查前端获取的id是否存在，null--@hystrixCommand");
+            }
+
+            @Override
+            public List<ScType> list() {
+                return null;
+            }
+
+            @Override
+            public List<Market> mklist(Integer id) {
+                return null;
             }
         };
     }

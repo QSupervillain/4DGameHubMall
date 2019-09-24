@@ -2,6 +2,7 @@ package com.qbl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
@@ -10,7 +11,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @Date ：2019/9/20 22:20
  * @Description：
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableEurekaClient
 @EnableFeignClients(basePackages = "com.qbl")
 public class FeignApp_80 {

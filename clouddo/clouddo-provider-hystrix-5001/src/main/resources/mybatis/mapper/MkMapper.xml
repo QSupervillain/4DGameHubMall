@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qbl.dao.MkDao">
+    <resultMap id="sc_game" type="com.qbl.pojo.Market">
+        <id property="game_id" column="game_id"/>
+        <result property="type_id" column="type_id"></result>
+        <result property="account_id" column="account_id"></result>
+        <result property="game_title" column="game_title"></result>
+        <result property="game_describe" column="game_describe"></result>
+        <result property="game_QQ" column="game_QQ"></result>
+        <result property="game_image" column="game_image"></result>
+        <result property="game_money" column="game_money"></result>
+        <result property="game_time" column="game_time"></result>
+        <result property="game_status" column="game_status"></result>
+        <result property="game_region" column="game_region"></result>
+    </resultMap>
+    <select id="mklist" resultMap="sc_game" parameterType="int">
+        SELECT game_id,type_id,account_id,game_title,game_describe,game_QQ,game_image,game_money,game_time,game_status,game_region FROM sc_game where type_id=#{id}
+    </select>
+
+</mapper>

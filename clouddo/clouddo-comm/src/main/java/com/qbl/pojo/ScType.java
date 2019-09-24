@@ -20,4 +20,5 @@ public class ScType implements Serializable {
     private static final long serialVersionUID = -4532241936033527116L;
     private int type_id;
     private String type_name;
+    private String type_image;
 }

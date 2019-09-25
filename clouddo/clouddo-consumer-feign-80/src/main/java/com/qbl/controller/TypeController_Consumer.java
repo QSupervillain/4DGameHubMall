@@ -85,11 +85,11 @@ public class TypeController_Consumer {
             solrQuery.setHighlightSimplePost("</font>");
         }else{
             solrQuery.set("q","*:*");
+            QueryResponse queryResponse=solrClient.query(solrQuery);
+
+            List<Market> markets = queryResponse.getBeans(Market.class);
+            return markets;
         }
-       /* QueryResponse queryResponse=solrClient.query(solrQuery);
-
-        List<Market> markets = queryResponse.getBeans(Market.class);*/
-
         //查询
         QueryResponse query = solrClient.query(solrQuery);
         Map<String, Map<String, List<String>>> highlighting = query.getHighlighting();

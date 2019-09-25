@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author ：WenBinZeng
@@ -74,19 +75,36 @@ public class TypeController_Consumer {
         String solrUrl = "http://localhost:8081/solr/core_demo";
         //2 创建客户端链接
         HttpSolrClient solrClient = new HttpSolrClient.Builder(solrUrl).build();
-        SolrQuery quert=new SolrQuery();
+        SolrQuery solrQuery=new SolrQuery();
         if(!StringUtils.isEmpty(keyWord)){
-            quert.set("q","game_title:"+keyWord);
+            solrQuery.set("q","game_title:"+keyWord);
+            //hl 高亮设置
+            solrQuery.setHighlight(true);
+            solrQuery.addHighlightField("game_title");
+            solrQuery.setHighlightSimplePre("<font color='red'>");
+            solrQuery.setHighlightSimplePost("</font>");
         }else{
-            quert.set("q","*:*");
+            solrQuery.set("q","*:*");
         }
-        QueryResponse queryResponse=solrClient.query(quert);
-        List<Market> markets = queryResponse.getBeans(Market.class);
+       /* QueryResponse queryResponse=solrClient.query(solrQuery);
 
-        for (Market market:markets){
-            System.out.println(market.getGame_title());
+        List<Market> markets = queryResponse.getBeans(Market.class);*/
+
+        //查询
+        QueryResponse query = solrClient.query(solrQuery);
+        Map<String, Map<String, List<String>>> highlighting = query.getHighlighting();
+        //数据长度获取
+        long numFound = query.getResults().getNumFound();
+        System.out.println(numFound);
+        List<Market> list = query.getBeans(Market.class);
+        for (Market products : list) {
+            Map<String, List<String>> stringListMap = highlighting.get(products.getGame_ids());
+            List<String> strings = stringListMap.get("game_title");
+            String result = strings.get(0);
+            products.setGame_title(result);
+            System.out.println(products.getGame_title());
         }
-        return markets;
+        return list;
     }
 
 }

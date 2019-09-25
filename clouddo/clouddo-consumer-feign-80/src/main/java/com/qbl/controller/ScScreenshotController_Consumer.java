@@ -21,7 +21,6 @@ public class ScScreenshotController_Consumer {
     //根据id查询截图
     @RequestMapping("/consumer/getScScreenshotById/{game_id}")
     public ScScreenshot getScScreenshotById(@PathVariable("game_id") int game_id) {
-
         return mallClientService.getScScreenshotById(game_id);
     }
 

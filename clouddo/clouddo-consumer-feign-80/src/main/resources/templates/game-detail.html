@@ -172,11 +172,11 @@
             </a>
         </div>
 
-        <form id="gameSearchForm" action="/zuhao/" name="gameSearchForm" method="post">
+        <form id="gameSearchForm" action="/solr_sosu" name="gameSearchForm" method="post">
             <div class="fr">
                 <div class="index-search fl">
                     <div class="se-lease-input">
-                        <input type="text" class="zhw-se-val serch_content" placeholder="请输入关键词" name="keyWords"
+                        <input type="text" class="zhw-se-val serch_content" placeholder="请输入关键词" name="keyWord"
                                autocomplete="off" value="">
                         <!--<input type="hidden" id="game_Id" name="game_Id" value=""/>-->
                         <input type="hidden" name="gameDataChoose" value=""/>
@@ -301,16 +301,6 @@
             <div class="account-box" style="min-height:150px;height: auto;">
                 <ul>
                     <li>
-                        <div class="fl mr12">
-                            <i class="info-icon icon-rz1"></i>
-                            <span class="fs12">手机已认证</span>
-                        </div>
-                        <div class="fl">
-                            <i class="info-icon icon-rz2"></i>
-                            <span class="fs12">身份已认证</span>
-                        </div>
-                    </li>
-                    <li>
                         <span class="fl">服务承诺：</span>
 
                         <div class="fl">
@@ -395,7 +385,7 @@
                 <div class="info-msg-main">
                     <ul class="main_title">
                         <li class="active" onclick="_hmt.push(['_trackEvent', '账号截图', '账号截图']);">
-                            账号截图
+                            账号描述
                             <span></span>
                         </li>
                         <!--                <li onclick="_hmt.push(['_trackEvent', '账号详情', '用户评价']);">

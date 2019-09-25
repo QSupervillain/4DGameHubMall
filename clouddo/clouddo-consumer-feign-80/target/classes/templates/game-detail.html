@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Cache-Control" content="no-transform"/>
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <title th:text="${scGame.getGame_title()}"></title>
@@ -38,6 +39,7 @@
     <link rel="stylesheet" href="http://47.102.198.5:22222/mall/css/freesheet.css">
     <link rel="stylesheet" type="text/css" href="http://47.102.198.5:22222/mall/css/laypage.css"/>
     <meta name="__hash__" content="6d6bc2f0b46fa444777f328086ad0a21_c528a19d535b7b5251fb132e1375f9f4"/>
+
 </head>
 <style>
     .min_money {
@@ -131,6 +133,7 @@
         background-position: -3px 0;
     }
 </style>
+
 <body>
 <link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/jquery.mcustomscrollbar_1.css"/>
 <link type="text/css" rel="stylesheet" href="http://47.102.198.5:22222/mall/css/zhw_global_top.94120e6766a5a440.css"/>
@@ -292,7 +295,7 @@
 
         </div>
 
-        <form name="rentForm" action="/Search/actOrderRent.html" method="post" class="info-main-right">
+        <form name=alipayment action="/alipay.trade.page.pay" method="post" class="info-main-right">
             <div class="info-title" th:text="${scGame.getGame_title()}">
             </div>
             <div class="info-dist" th:text="${scGame.getGame_region()}"></div>
@@ -302,10 +305,8 @@
                 <ul>
                     <li>
                         <span class="fl">服务承诺：</span>
-
                         <div class="fl">
-
-                                                            <span class="info-label">商
+                                     <span class="info-label">商
                                     <div class="ant-tooltip-content">
                                         <div class="ant-tooltip-arrow"></div>
                                         <div class="ant-tooltip-inner">
@@ -370,11 +371,11 @@
 
                     </div>
                 </div>
-
-                <input type="button" value="立即购买"
-                       onclick="rentNow();_czc.push(['_trackEvent','账号详情页','立即租用预约']);_hmt.push(['_trackEvent', '账号详情', '立即租用']);"
-                       class="info-rent-btn"/>
-
+                <input style="display: none" id="WIDout_trade_no" name="WIDout_trade_no" />
+                <input style="display: none" id="WIDtotal_amount" name="WIDtotal_amount" th:value="${scGame.getGame_money()}"/>
+                <input style="display: none" id="WIDbody" name="WIDbody" th:value="${scGame.getGame_describe()}" />
+                <input  style="display: none" id="WIDsubject" name="WIDsubject" th:value="${scGame.getGame_title()}"/>
+                <button type="submit" class="info-rent-btn">即购买立</button>
                 <!-- 免单抽奖按钮 -->
                 <div>
 
@@ -398,7 +399,7 @@
                     <div class="main_con_box">
                         <div class="account_msg_box">
                             <div class="key_msg_box">
-                                <div class="key_msg2" th:utext="${scGame.getGame_describe()}">
+                                <div class="key_msg2"  th:utext="${scGame.getGame_describe()}">
                                 </div>
                             </div>
                             <img th:src="${scScreenshot.getScreenshot_src()}" alt=""/>
@@ -406,13 +407,29 @@
 
                     </div>
                 </div>
-
-
             </div>
         </form>
         <!-- 喇叭 -->
+        <script language="javascript">
+            function GetDateNow() {
+                var vNow = new Date();
+                var sNow = "";
+                sNow += String(vNow.getFullYear());
+                sNow += String(vNow.getMonth() + 1);
+                sNow += String(vNow.getDate());
+                sNow += String(vNow.getHours());
+                sNow += String(vNow.getMinutes());
+                sNow += String(vNow.getSeconds());
+                sNow += String(vNow.getMilliseconds());
+               // alert(sNow);
+                //生成訂單號
+                document.getElementById("WIDout_trade_no").value = sNow;
+            }
+            GetDateNow();
+        </script>
         <div class="zhw-trumpet" id="zhw-trumpet"></div>
     </div>
-
+</div>
 </body>
+
 </html>

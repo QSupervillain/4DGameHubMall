@@ -4,7 +4,7 @@ server:
 # 服务器名称
 spring:
   application:
-    name: clouddo-consumer-feign                         #微服务名  对外暴露微服务的名字
+    name: clouddo-consumer-feign #微服务名  对外暴露微服务的名字
   thymeleaf:
     encoding: UTF-8
     cache: false

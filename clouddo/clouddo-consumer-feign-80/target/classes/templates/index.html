@@ -113,17 +113,17 @@
     function solr_sosu() {
         $("#AccountList tr").remove();
         var keyWord=$("#keyWord").val();
-        alert(keyWord);
+        //alert(keyWord);
        $.ajax({
             url: '/solr_sosu',
             async: false,
             dataType: 'json',
             data: {'keyWord':keyWord},
             success: function (mk) {
-                alert(mk)
+                //alert(mk)
                 var li = "";
                 for (var i = 0; i < mk.length; i++) {
-                    alert("wwwwwwww")
+                   // alert("wwwwwwww")
                     li += "<tr>";
                     li += "<td width=\"100\" style=\"position:relative;\">";
                     li += "<a class=\"list-img\" href='#' target=\"_blank\"";

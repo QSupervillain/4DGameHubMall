@@ -1,5 +1,7 @@
 package com.qbl.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.qbl.dao.MkDao;
 import com.qbl.dao.TypeDao;
 import com.qbl.pojo.Market;
@@ -30,8 +32,12 @@ public class ScController {
     public List<ScType>list(){
         return typeService.typelist();
     }
-    @RequestMapping("/mk/list/{id}")
-    public List<Market>mklist(@PathVariable("id") Integer id){
-        return mkService.mklist(id);
+    @RequestMapping("/mk/list/{id}/{index}")
+    public PageInfo<Market> mklist(@PathVariable("id") Integer id,@PathVariable("index") Integer index){
+        PageHelper.startPage(index,2);
+        List<Market> list = mkService.mklist(id);
+        PageInfo<Market> page = new PageInfo<>(list);
+        System.out.println(page.getList());
+        return  page;
     }
 }

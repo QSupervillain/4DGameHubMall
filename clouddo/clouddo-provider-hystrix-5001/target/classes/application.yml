@@ -44,3 +44,10 @@ info:
   company.name: www.qbl.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+
+#pagehelper分页插件配置
+pagehelper:
+  #<!-- 启用合理化时，如果pageNum<1或pageNum>pages会返回首页或尾页 -->
+  reasonable: true
+  #<!-- pageSize=0相当于没有执行分页查询，但是返回结果仍然是Page类型 -->
+  pageSizeZero: true

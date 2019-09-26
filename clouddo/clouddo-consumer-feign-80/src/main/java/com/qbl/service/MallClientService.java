@@ -1,5 +1,6 @@
 package com.qbl.service;
 
+import com.github.pagehelper.PageInfo;
 import com.qbl.pojo.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,7 +23,7 @@ public interface MallClientService {
 
     @RequestMapping("/sc/list")
     List<ScType> list();
-    @RequestMapping("/mk/list/{id}")
-    List<Market>mklist(@PathVariable("id") Integer id);
+    @RequestMapping("/mk/list/{id}/{index}")
+    PageInfo<Market> mklist(@PathVariable("id") Integer id,@PathVariable("index") Integer index);
 
 }

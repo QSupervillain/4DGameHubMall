@@ -11,8 +11,10 @@ import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.StringUtils;
+import org.apache.zookeeper.data.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -39,26 +41,25 @@ public class TypeController_Consumer {
     public String index(){
         return "index";
     }
-    @RequestMapping("/consumer/mk/list2")
+//    @RequestMapping("/consumer/mk/list2")
+//    @ResponseBody
+//    public PageInfo<Market> pageli2st(String typeid, String index){
+//        int i = Integer.parseInt(index);
+//        PageHelper.startPage(i,2);
+//        List<Market> mklist = AccountClientService.mklist(Integer.parseInt(typeid));
+//        PageInfo<Market> page = new PageInfo<>(mklist);
+//        page.setPageSize(2);
+//        //System.out.println(page);
+//        return page;
+//    }
+    @RequestMapping("/list/{id}/{index}")
     @ResponseBody
-    public PageInfo<Market> pageli2st(String typeid, String index){
-        int i = Integer.parseInt(index);
-        PageHelper.startPage(i,2);
-        List<Market> mklist = AccountClientService.mklist(Integer.parseInt(typeid));
-        PageInfo<Market> page = new PageInfo<>(mklist);
-        page.setPageSize(2);
-        //System.out.println(page);
-        return page;
-    }
-    @RequestMapping("/list")
-    @ResponseBody
-    public PageInfo<Market> pagelist(String typeid, String index){
-        PageHelper.startPage(Integer.parseInt(index),2,"game_id asc");
-        List<Market> mklist = AccountClientService.mklist(Integer.parseInt(typeid));
-        PageInfo<Market> page = new PageInfo<>();
-        page.setList(mklist);
+    public PageInfo<Market> pagelist(@PathVariable("id") Integer id,@PathVariable("index") Integer index){
+      //  List<Market> mklist = AccountClientService.mklist(Integer.parseInt(typeid));
+        PageInfo<Market> mklist = AccountClientService.mklist(id,index);
+        //page.setList(mklist);
        // System.out.println(page);
-        return page;
+        return mklist;
     }
 
     /**

@@ -1,5 +1,6 @@
 package com.qbl.service;
 
+import com.github.pagehelper.PageInfo;
 import com.qbl.pojo.*;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
@@ -38,9 +39,11 @@ public class MallClientServiceFallbackFactory implements FallbackFactory<MallCli
             }
 
             @Override
-            public List<Market> mklist(Integer id) {
+            public PageInfo<Market> mklist(Integer id, Integer index) {
                 return null;
             }
+
+
         };
     }
 }

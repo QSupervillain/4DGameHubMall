@@ -22,4 +22,17 @@ public class MkServiceImpl implements MkService {
     public List<Market> mklist(int id) {
         return mkDao.mklist(id);
     }
+
+    /**
+     * 根据游戏id修改状态
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public int update_mklist(int id) {
+        return mkDao.update_mklist(id);
+    }
+
+
 }

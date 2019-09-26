@@ -43,6 +43,10 @@ public class MallClientServiceFallbackFactory implements FallbackFactory<MallCli
                 return null;
             }
 
+            @Override
+            public int update_mklist(Integer id) {
+                return 0;
+            }
 
         };
     }

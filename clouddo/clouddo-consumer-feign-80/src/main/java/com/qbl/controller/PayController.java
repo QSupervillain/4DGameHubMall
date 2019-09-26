@@ -3,9 +3,12 @@ package com.qbl.controller;
 import com.alipay.api.*;
 import com.alipay.api.internal.util.*;
 import com.alipay.api.request.*;
+import com.qbl.service.MallClientService;
 import com.qbl.utils.AlipayConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,15 +19,13 @@ import java.util.Map;
 
 @Controller
 public class PayController {
+    @Autowired
+    private MallClientService AccountClientService;
     /**
      * 获取支付信息
-     *
-     * @param response
-     * @param request
-     * @param modelAndView
-     * @return
-     * @throws Exception
      */
+
+    private String body;
     @RequestMapping("/alipay.trade.page.pay")
     public ModelAndView alipay_pay(HttpServletResponse response, HttpServletRequest request, ModelAndView modelAndView) throws Exception {
         System.out.println("join*************");
@@ -42,7 +43,7 @@ public class PayController {
         //订单名称，必填
         String subject = new String(request.getParameter("WIDsubject").getBytes("ISO-8859-1"), "UTF-8");
         //商品描述，可空
-        String body = new String(request.getParameter("WIDbody").getBytes("ISO-8859-1"), "UTF-8");
+        body = new String(request.getParameter("WIDbody").getBytes("ISO-8859-1"), "UTF-8");
 
         alipayRequest.setBizContent("{\"out_trade_no\":\"" + out_trade_no + "\","
                 + "\"total_amount\":\"" + total_amount + "\","
@@ -249,7 +250,8 @@ public class PayController {
     }
 
     @RequestMapping("/return_url")
-    public String getReturnInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    @ResponseBody
+    public ModelAndView getReturnInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
         System.out.println("----------------------------notify_url------------------------");
         // 商户订单号
         String out_trade_no = new String(request.getParameter("out_trade_no").getBytes("ISO-8859-1"),"UTF-8");
@@ -263,11 +265,18 @@ public class PayController {
         System.out.println("商户订单号:" + out_trade_no);
         System.out.println("付款金额:" + total_amount);
         System.out.println("支付宝交易号:" + trade_no);
+        //商品订单
+        System.out.println(Integer.parseInt(body));
        // System.out.println("交易状态:" + trade_status);
 
        /* if(trade_status.equals("TRADE_SUCCESS")){
             System.out.println("交易成功,进行其他业务逻辑处理........");
         }*/
-       return "index";
+       //修改订单状态
+       AccountClientService.update_mklist(Integer.parseInt(body));
+       ModelAndView modelAndView =new ModelAndView();
+       modelAndView.setViewName("index");
+       return modelAndView;
     }
+
 }

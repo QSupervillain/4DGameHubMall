@@ -42,8 +42,8 @@ eureka:
 info:
   app.name: cxk-microservicecloud
   company.name: www.qbl.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build.artifactId: clouddo-provider-hystrix-5001
+  build.version: 1.0-SNAPSHOT
 
 #pagehelper分页插件配置
 pagehelper:

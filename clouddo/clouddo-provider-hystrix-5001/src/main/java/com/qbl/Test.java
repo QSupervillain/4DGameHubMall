@@ -36,4 +36,8 @@ public class Test {
         List<Market> mklist = mkService.mklist(0);
         System.out.println(mklist);
     }
+    @org.junit.Test
+    public void cc(){
+        mkService.update_mklist(6);
+    }
 }

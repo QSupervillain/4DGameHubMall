@@ -17,7 +17,9 @@
         <result property="game_region" column="game_region"></result>
     </resultMap>
     <select id="mklist" resultMap="sc_game" parameterType="int">
-        SELECT game_id,type_id,account_id,game_title,game_describe,game_QQ,game_image,game_money,game_time,game_status,game_region FROM sc_game where type_id=#{id}
+        SELECT game_id,type_id,account_id,game_title,game_describe,game_QQ,game_image,game_money,game_time,game_status,game_region FROM sc_game where type_id=#{id} and game_status=0
     </select>
-
+    <update id="update_mklist" parameterType="int">
+        UPDATE sc_game SET game_status=1 WHERE game_id=#{id}
+    </update>
 </mapper>

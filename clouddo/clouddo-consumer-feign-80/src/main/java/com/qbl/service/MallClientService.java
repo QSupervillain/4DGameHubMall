@@ -25,4 +25,7 @@ public interface MallClientService {
     List<ScType> list();
     @RequestMapping("/mk/list/{id}/{index}")
     PageInfo<Market> mklist(@PathVariable("id") Integer id,@PathVariable("index") Integer index);
+    @RequestMapping("/mk/{id}")
+    public int update_mklist(@PathVariable("id") Integer id);
+
 }

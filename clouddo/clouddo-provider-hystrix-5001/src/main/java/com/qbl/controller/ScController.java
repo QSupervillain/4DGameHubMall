@@ -40,4 +40,9 @@ public class ScController {
         System.out.println(page.getList());
         return  page;
     }
+    @RequestMapping("/mk/{id}")
+    public int update_mklist(@PathVariable("id") Integer id){
+        int i = mkService.update_mklist(id);
+        return i;
+    }
 }

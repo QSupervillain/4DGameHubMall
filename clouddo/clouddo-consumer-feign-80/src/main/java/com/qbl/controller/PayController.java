@@ -265,6 +265,7 @@ public class PayController {
         System.out.println("商户订单号:" + out_trade_no);
         System.out.println("付款金额:" + total_amount);
         System.out.println("支付宝交易号:" + trade_no);
+
         //商品订单
         System.out.println(Integer.parseInt(body));
        // System.out.println("交易状态:" + trade_status);
@@ -272,6 +273,8 @@ public class PayController {
        /* if(trade_status.equals("TRADE_SUCCESS")){
             System.out.println("交易成功,进行其他业务逻辑处理........");
         }*/
+       //新增订单
+        AccountClientService.insertScPay(out_trade_no,1,trade_no,Double.parseDouble(total_amount));
        //修改订单状态
        AccountClientService.update_mklist(Integer.parseInt(body));
        ModelAndView modelAndView =new ModelAndView();

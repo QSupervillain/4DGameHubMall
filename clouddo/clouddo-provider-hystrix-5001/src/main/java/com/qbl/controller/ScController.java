@@ -34,7 +34,7 @@ public class ScController {
     }
     @RequestMapping("/mk/list/{id}/{index}")
     public PageInfo<Market> mklist(@PathVariable("id") Integer id,@PathVariable("index") Integer index){
-        PageHelper.startPage(index,2);
+        PageHelper.startPage(index,4);
         List<Market> list = mkService.mklist(id);
         PageInfo<Market> page = new PageInfo<>(list);
         System.out.println(page.getList());

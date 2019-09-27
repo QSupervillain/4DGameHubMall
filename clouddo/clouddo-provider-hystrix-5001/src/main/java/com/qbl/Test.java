@@ -10,7 +10,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import com.qbl.service.scPayService;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,6 +28,8 @@ public class Test {
     private TypeService typeService;
     @Autowired(required = false)
     private MkService mkService;
+    @Autowired(required = false)
+    private scPayService scPayService;
 
     @org.junit.Test
     public void aa(){
@@ -39,5 +44,12 @@ public class Test {
     @org.junit.Test
     public void cc(){
         mkService.update_mklist(6);
+    }
+    @org.junit.Test
+    public void dd(){
+        //Date date=new Date();
+        //SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd :hh:mm:ss");
+        //System.out.println(dateFormat.format(date));
+        scPayService.insertScPay("55551",2,"222",200);
     }
 }

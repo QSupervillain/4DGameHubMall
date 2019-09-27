@@ -48,6 +48,16 @@ public class MallClientServiceFallbackFactory implements FallbackFactory<MallCli
                 return 0;
             }
 
+            @Override
+            public int insertScPay(String order_no, int pay_platform, String pay_number, double pay_prince) {
+                return 0;
+            }
+
+            @Override
+            public int insert(String order_no, int pay_platform, String pay_number, double pay_prince) {
+                return 0;
+            }
+
         };
     }
 }

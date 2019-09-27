@@ -27,5 +27,10 @@ public interface MallClientService {
     PageInfo<Market> mklist(@PathVariable("id") Integer id,@PathVariable("index") Integer index);
     @RequestMapping("/mk/{id}")
     public int update_mklist(@PathVariable("id") Integer id);
+    //支付成功  生成订单
+    @RequestMapping("/scPay/{order_no}/{pay_platform}/{pay_number}/{pay_prince}")
+    public int insertScPay(@PathVariable("order_no")String order_no,@PathVariable("pay_platform")int pay_platform,@PathVariable("pay_number") String pay_number, @PathVariable("pay_prince")double pay_prince);
+    @RequestMapping("/scPay")
+    public int insert(@PathVariable String order_no,@PathVariable int pay_platform, @PathVariable String pay_number,@PathVariable double pay_prince);
 
 }

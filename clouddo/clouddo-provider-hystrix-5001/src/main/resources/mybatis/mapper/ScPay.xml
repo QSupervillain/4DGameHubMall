@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qbl.dao.scPayDao">
+    <resultMap id="sc_pay_info" type="com.qbl.pojo.scPay">
+        <id property="pay_id" column="pay_id"/>
+        <result property="order_no" column="order_no"></result>
+        <result property="pay_platform" column="pay_platform"></result>
+        <result property="pay_number" column="pay_number"></result>
+        <result property="pay_createtime" column="pay_createtime"></result>
+        <result property="pay_prince" column="pay_prince"></result>
+    </resultMap>
+    <insert id="insertScPay" parameterType="com.qbl.pojo.scPay">
+        INSERT INTO sc_pay_info VALUES(0,#{order_no},#{pay_platform},#{pay_number},NOW(),#{pay_prince})
+    </insert>
+</mapper>
